@@ -194,7 +194,7 @@ function LandingPage(){
             </Nav>
           </Collapse>
         </Container>
-      </Navbar>
+      </Navbar> 
       
       <div 
             onClick={()=>handleAppClick()}>
