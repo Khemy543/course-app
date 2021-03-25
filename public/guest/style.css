@@ -57,6 +57,19 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
   font-size: 48px;
 }
+.nav-link{
+  font-weight: 700;
+}
+
+.head-subtitle{
+  color: #a9a3a3;
+  letter-spacing: 7px;
+  position: relative;
+  text-transform: uppercase;
+}
+p{
+  font-size: 14px !important;
+}
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 32px;
@@ -95,7 +108,7 @@ h4 {
 h5 {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
-  color: #f1c30f;
+  color: #17d0cf;
   text-transform: uppercase;
 }
 
@@ -211,7 +224,7 @@ a:focus {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  color: #f1c30f;
+  color: #17d0cf;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   word-spacing: 8px;
@@ -296,7 +309,7 @@ a:focus {
   line-height: 24px;
 }
 .blog-section a {
-  color: #f1c30f;
+  color: #17d0cf;
   font-size: 12px;
   font-family: "Raleway", sans-serif;
   display: inline-block;
@@ -623,7 +636,7 @@ a:focus {
 /* pricing table font */
 /* vertical heading */
 .vertical-heading span {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 
 /* home styling start */
@@ -651,7 +664,7 @@ a:focus {
   color: #202125;
 }
 .navbar.shrink .nav li a:hover {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 .navbar .navbar-nav {
   margin-right: 5px;
@@ -678,7 +691,7 @@ a:focus {
   background: #ffffff;
 }
 .navbar .navbar-header button span {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   .navbar .navbar-collapse {
@@ -707,7 +720,7 @@ a:focus {
   }
 }
 .navbar .nav li a:hover {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 .navbar .nav li a:before {
   position: absolute;
@@ -715,7 +728,7 @@ a:focus {
   width: 100%;
   display: table;
   height: 4px;
-  background: #f1c30f;
+  background: #17d0cf;
   bottom: -5px;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
@@ -747,7 +760,7 @@ a:focus {
 .navbar .side-menu-button {
   position: relative;
   cursor: pointer;
-  background-color: #f1c30f;
+  background-color: #17d0cf;
   padding: 7px 14px;
   border-radius: 4px;
   color: #ffffff;
@@ -772,7 +785,7 @@ a:focus {
   background: transparent;
 }
 .navbar .side-menu-button.actives .fa {
-  color: #f1c30f;
+  color: #17d0cf;
   font-size: 36px;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
@@ -839,7 +852,7 @@ a:focus {
   }
 }
 .navbar .sidenav ul > li.active a {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
@@ -865,7 +878,7 @@ a:focus {
   font-weight: 100;
 }
 #slider1 h1 span {
-  color: #f1c30f;
+  color: #17d0cf;
   font-weight: 500;
 }
 #slider1 p {
@@ -894,7 +907,7 @@ a:focus {
   border-color: transparent;
 }
 #slider1 .button:before {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 #slider1 .button:hover, #slider1 .button:focus, #slider1 .button:active {
   color: #ffffff;
@@ -913,7 +926,7 @@ a:focus {
 }
 #slider1 .tp-bullets .tp-bullet:hover, #slider1 .tp-bullets .tp-bullet.selected {
   background: transparent;
-  border-bottom: 2px solid #f1c30f;
+  border-bottom: 2px solid #17d0cf;
 }
 #slider1 .tp-bullets .tp-bullet span {
   color: #ffffff;
@@ -1023,7 +1036,7 @@ a:focus {
 #about-us #about-us-2 .section hr {
   width: 45px;
   height: 3px;
-  background: #f1c30f;
+  background: #17d0cf;
   margin: 0 auto 20px;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
@@ -1037,7 +1050,7 @@ a:focus {
   line-height: 24px;
 }
 #about-us #about-us-2 .section:hover {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 #about-us #about-us-2 .section:hover hr {
   background: #ffffff;
@@ -1106,7 +1119,7 @@ a:focus {
   top: 30px;
 }
 #about-us #about-us-3 .hovereffect .overlay .info h6 {
-  color: #f1c30f;
+  color: #17d0cf;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
 }
@@ -1132,7 +1145,7 @@ a:focus {
   overflow: visible;
 }
 #about-us #about-us-3 .bottom-section .progress .progress-bar {
-  background: #f1c30f;
+  background: #17d0cf;
   position: relative;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -1193,7 +1206,7 @@ a:focus {
 }
 #about-us #about-us-4 p {
   font-family: "Raleway", sans-serif;
-  color: #f1c30f;
+  color: #17d0cf;
   margin-top: 8px;
 }
 
@@ -1268,7 +1281,7 @@ a:focus {
   -webkit-transform: translateX(-20px);
   -ms-transform: translateX(-20px);
   transform: translateX(-20px);
-  color: #f1c30f;
+  color: #17d0cf;
 }
 #services #service-2 {
   background: #f5f5f5;
@@ -1324,11 +1337,11 @@ a:focus {
   margin-bottom: 10px;
 }
 #services #service-2 #responsiveTabsDemo .r-tabs-state-active a {
-  border-bottom: 3px solid #f1c30f;
+  border-bottom: 3px solid #17d0cf;
   -webkit-transition: border-color 300ms linear;
   transition: border-color 300ms linear;
   padding-bottom: 5px;
-  color: #f1c30f;
+  color: #17d0cf;
 }
 #services #service-2 #responsiveTabsDemo h2 {
   font-size: 48px;
@@ -1378,7 +1391,7 @@ a:focus {
   }
 }
 #services #service-2 #responsiveTabsDemo .button {
-  background: #f1c30f;
+  background: #17d0cf;
   color: #ffffff;
 }
 #services #service-2 #responsiveTabsDemo .button:before {
@@ -1411,7 +1424,7 @@ a:focus {
   color: #ffffff;
 }
 #services #service-3 .section h2 {
-  color: #f1c30f;
+  color: #17d0cf;
   margin-bottom: 6px;
 }
 @media screen and (max-width: 992px) {
@@ -1420,7 +1433,7 @@ a:focus {
   }
 }
 #services #service-3 .section:hover {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 #services #service-3 .section:hover h2 {
   color: #202125;
@@ -1471,8 +1484,8 @@ a:focus {
   }
 }
 #portfolio #portfolio1 .list button.active span {
-  border-bottom: 3px solid #f1c30f;
-  color: #f1c30f;
+  border-bottom: 3px solid #17d0cf;
+  color: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   #portfolio #portfolio1 .list {
@@ -1551,7 +1564,7 @@ a:focus {
   color: #ffffff;
 }
 #portfolio #portfolio1 .block-container .filter .each-item .cap2 .text h4 {
-  color: #f1c30f;
+  color: #17d0cf;
   font-size: 20px;
 }
 #portfolio #portfolio1 .block-container .filter .each-item .cap2 .text p {
@@ -1602,7 +1615,7 @@ a:focus {
   transform: translateY(-50%);
 }
 #portfolio #portfolio1 .block-container .load-more .btn-div .button:before {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   #portfolio #portfolio1 .block-container .load-more .btn-div {
@@ -1625,7 +1638,7 @@ a:focus {
 }
 #portfolio #portfolio2 #client-slider .item {
   padding: 50px;
-  background: #f1c30f;
+  background: #17d0cf;
   color: #ffffff;
 }
 #portfolio #portfolio2 #client-slider .item .row {
@@ -1701,7 +1714,7 @@ a:focus {
   padding: 32px 21px;
 }
 #portfolio #portfolio3 .pricing-table h4 {
-  color: #f1c30f;
+  color: #17d0cf;
   font-family: "Raleway", sans-serif;
   margin-bottom: 25px;
 }
@@ -1757,7 +1770,7 @@ a:focus {
   color: #62be10;
 }
 #portfolio #portfolio3 .pricing-table .button {
-  background: #f1c30f;
+  background: #17d0cf;
   color: #ffffff;
 }
 #portfolio #portfolio3 .pricing-table .button:before {
@@ -1779,7 +1792,7 @@ a:focus {
   color: #202125;
 }
 #portfolio #portfolio3 .pricing-table.black .button:before {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 #portfolio #portfolio3 .pricing-table.black .button:hover, #portfolio #portfolio3 .pricing-table.black .button:focus, #portfolio #portfolio3 .pricing-table.black .button:active {
   color: #ffffff;
@@ -1794,7 +1807,7 @@ a:focus {
 }
 #portfolio #portfolio3 .pricing-table:hover {
   color: #ffffff;
-  background: #f1c30f;
+  background: #17d0cf;
 }
 #portfolio #portfolio3 .pricing-table:hover h2, #portfolio #portfolio3 .pricing-table:hover h4, #portfolio #portfolio3 .pricing-table:hover h2 > span, #portfolio #portfolio3 .pricing-table:hover p, #portfolio #portfolio3 .pricing-table:hover ul li > i, #portfolio #portfolio3 .pricing-table:hover h2 > .month {
   color: #ffffff;
@@ -1826,7 +1839,7 @@ a:focus {
 }
 #news #news-1 .left-section .button {
   margin-top: 25px;
-  background: #f1c30f;
+  background: #17d0cf;
   color: #ffffff;
 }
 #news #news-1 .left-section .button:before {
@@ -2106,7 +2119,7 @@ a:focus {
   }
 }
 #contact-us #contact-us2 .left-section #countries ul li:hover {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   #contact-us #contact-us2 .left-section #countries ul.one {
@@ -2171,7 +2184,7 @@ a:focus {
   color: #ffffff;
 }
 #contact-us #contact-us2 .right-section form .button:before {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   #contact-us #contact-us2 {
@@ -2252,7 +2265,7 @@ footer p span {
   top: 50px;
 }
 #news-page #news #blog-container .timeline-badge a {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 #news-page #news #blog-container .timeline-badge:before {
   display: block;
@@ -2286,7 +2299,7 @@ footer p span {
   margin-top: 50px;
 }
 #news-page #news .load-more .button {
-  background: #f1c30f;
+  background: #17d0cf;
   color: #ffffff;
 }
 #news-page #news .load-more .button:before {
@@ -2317,7 +2330,7 @@ footer p span {
   background: #f5f5f5;
   padding: 30px;
   margin-bottom: 50px;
-  border-left: 5px solid #f1c30f;
+  border-left: 5px solid #17d0cf;
 }
 #news--detail-page #post #post-content #blog-quote p {
   font-size: 18px;
@@ -2348,7 +2361,7 @@ footer p span {
   line-height: 35px;
   font-size: 12px;
   font-family: "Raleway", sans-serif;
-  color: #f1c30f;
+  color: #17d0cf;
 }
 #news--detail-page #post .post-footer ul li a {
   color: #ffffff;
@@ -2390,7 +2403,7 @@ footer p span {
   margin-bottom: 5px;
 }
 #news--detail-page #blogger .blogger-data #blogger-info p:nth-child(2) {
-  color: #f1c30f;
+  color: #17d0cf;
   font-size: 12px;
   margin-bottom: 5px;
 }
@@ -2434,7 +2447,7 @@ footer p span {
   min-height: 300px;
 }
 #news--detail-page form .button {
-  background: #f1c30f;
+  background: #17d0cf;
   color: #ffffff;
 }
 #news--detail-page form .button:before {
@@ -2705,7 +2718,7 @@ footer p span {
   }
 }
 #register #register2 .left-section #countries ul li:hover {
-  color: #f1c30f;
+  color: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   #register #register2 .left-section #countries ul.one {
@@ -2770,7 +2783,7 @@ footer p span {
   color: #ffffff;
 }
 #register #register2 .right-section form .button:before {
-  background: #f1c30f;
+  background: #17d0cf;
 }
 @media screen and (max-width: 767px) {
   #register #register2 {

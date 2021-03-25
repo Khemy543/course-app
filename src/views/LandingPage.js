@@ -128,9 +128,9 @@ function LandingPage(){
             <NavbarBrand
             data-placement="bottom"
             >
-            <a href="/auth/landing-page">
-            {/* <img alt="Course App" src={logo} style={{height:"auto", width:"160px"}}/> */}
-            <h2 style={{fontSize:"25px"}}>Course App</h2>
+            <a href="/auth/landing-page" >
+            <img alt="Course App" src="http://jthemes.org/html/reactjs/genius/assets/img/logo/logo.png" style={{height:"55px", width:"auto"}}/>
+            {/* <h2 style={{fontSize:"30px"}}><strong>GSR</strong> Consulting</h2> */}
             </a>
             </NavbarBrand>
             
@@ -186,7 +186,7 @@ function LandingPage(){
                 <NavLink  
                 className="mt--2"
                 href="/auth/login"
-                style={{fontWeight:"700",color:"yellow", backgroundColor:"blue", padding:"10px", borderRadius:"10px"}}                  
+                style={{fontWeight:"700",color:"yellow", backgroundColor:"#17d0cf", padding:"10px", borderRadius:"10px"}}                  
                 >
                     GET STARTED <i className="fa fa-sign-in"/>
                 </NavLink>
@@ -212,7 +212,7 @@ function LandingPage(){
                       >
                         {/* MAIN IMAGE */}
                         <img
-                          src={sliderOone}
+                          src="http://jthemes.org/html/reactjs/genius/assets/img/banner/s-1.jpg"
                           alt="cover"
                           style={{width:"auto", height:"120px"}}
                           className="image-filter"
@@ -228,7 +228,7 @@ function LandingPage(){
                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
                         data-start="1000" data-fontsize="65"
                         >
-                          solution for
+                          solution
                         </h1>
                         <h1
                          className="tp-caption News-Title  text-center middleman"
@@ -240,7 +240,7 @@ function LandingPage(){
                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
                         data-start="1500" data-width="670" data-fontsize="65"
                         >
-                           <span>education</span>
+                          for <span>education</span>
                         </h1>
                         <p
                           className="tp-caption News-Title  text-center news-liner"
@@ -277,7 +277,7 @@ function LandingPage(){
                       >
                         {/* MAIN IMAGE */}
                         <img
-                          src={sliderTwo}
+                          src="http://jthemes.org/html/reactjs/genius/assets/img/banner/s-4.jpg"
                           alt="cover"
                           style={{height:1280, width:1920}}
                         />
@@ -304,7 +304,7 @@ function LandingPage(){
                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
                         data-start="1500" data-width="670" data-fontsize="65"
                         >
-                          ads <span>anytime</span>
+                          your <span>Progress</span>
                         </h1>
                         <p
                           className="tp-caption News-Title  text-center news-liner"
@@ -341,7 +341,7 @@ function LandingPage(){
                       >
                         {/* MAIN IMAGE */}
                         <img
-                          src={sliderThree}
+                          src="http://jthemes.org/html/reactjs/genius/assets/img/banner/s-3.jpg"
                           alt="cover"
                           style={{height:1280, width:1920}}
                         />
@@ -369,7 +369,7 @@ function LandingPage(){
                         data-start="1500" data-width="670" data-fontsize="60"
                         >
                           {" "}
-                          <span>Businesses</span>
+                          Your <span>Knowledge</span>
                           {" "}
                         </h1>
                         <p
@@ -412,12 +412,12 @@ function LandingPage(){
                 <div className="container">
                   <div className="row">
                     <div className="col-xs-12 col-sm-7 wow slideInDown">
-                      <div className="section-top-heading">
+                      {/* <div className="section-top-heading">
                       <h2 className="big-text">
-                       Search <strong>Genius</strong> <br />
-                        Courses
+                        <strong>GRS </strong>Consulting
+                        
                           </h2>
-                      </div>
+                      </div> */}
                         <div className="left-section">
                           <img
                             src={services}
@@ -428,17 +428,23 @@ function LandingPage(){
                     </div>
                     <div className="col-sm-5" >
                       <div className="right-section">
-                        <h3 style={{ fontSize:"32px" }}>Who we are</h3>
+                      <h4 className="head-subtitle">About Us</h4>
+                      <h2 className="big-text" style={{marginLeft:"0px"}}>
+                        We Are <strong>GRS </strong>Consulting
+                        
+                          </h2>
                         <hr />
                         <p>
-                        Kokrokoo is Africa's premier advertising hub where brands, entrepreneurs, organisations and even individuals can interact directly with TV, radio stations and print media for advertisements via the internet with limited human intervention.<br/><br/>
-
-                        In the similitude of the crow of a cock to announce the break of day, Kokrokoo also seeks to Announce you to the world.<br/><br/>
-
-                        Kokrokoo gives it's users real-time access to media houses and their various rates for advertisements, as well as a scheduling and monitoring tool for all advertisement subscriptions and a host of other services.<br/><br/>
-
-                        It's a whole new experience!!
+                        Welcome to our site! We’re excited you’re exploring our service offerings. For more than a decade, our Company has been a key industry player in management and leadership development training and consulting. 
                         </p>
+                        
+                        <h4>Our Passion</h4>
+                        <p>We take a great delight in seeing organizations become efficient and deliver results through the deployment of well-developed.
+</p>
+                        <h4>Our Vision</h4>
+                        <p>We exist to deliver affordable, quality and relevant management and leadership training and consultancy solutions, employing modern adult learning tools and methods</p>
+                        <h4>Our Mission</h4>
+                        <p>To be Africa’s leading provider of high-impact, leadership and management training and consultancy services</p>
                       </div>
                     </div>
                       </div>
@@ -452,8 +458,8 @@ function LandingPage(){
                 <div className="row">
                     <div className="col-xs-12 col-sm-7">
                     <div className="section-top-heading">
-                        <h2 className="big-text">What We Do<br/>
-                        <strong>Our Services</strong></h2>
+                        <h4 className="head-subtitle">Our Services</h4>
+                        <h2 className="big-text" style={{marginLeft:"0px"}}>What We <strong>Do</strong></h2>
                       </div>
                     </div>
                 </div>
