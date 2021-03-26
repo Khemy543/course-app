@@ -35,7 +35,7 @@ const Login = () => {
                   href="https://www.creative-tim.com?ref=adr-auth-footer"
                   target="_blank"
                 >
-                  Creative Tim
+                  GRS Consulting
                 </a>
               </div>
             </Col>
@@ -46,7 +46,7 @@ const Login = () => {
                     href="https://www.creative-tim.com?ref=adr-auth-footer"
                     target="_blank"
                   >
-                    Creative Tim
+                    GRS Consulting
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -63,14 +63,6 @@ const Login = () => {
                     target="_blank"
                   >
                     Blog
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-auth-footer"
-                    target="_blank"
-                  >
-                    MIT License
                   </NavLink>
                 </NavItem>
               </Nav>
