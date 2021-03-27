@@ -21,16 +21,35 @@ import client1 from '../assets/img/brand/client1.jpeg';
 import client2 from '../assets/img/brand/client2.jpeg';
 import client3 from '../assets/img/brand/client3.jpeg';
 import client4 from '../assets/img/brand/client4.jpeg';
+import client5 from '../assets/img/brand/client5.jpeg';
+import client6 from '../assets/img/brand/client6.jpeg';
+import client7 from '../assets/img/brand/client7.jpeg';
+import client8 from '../assets/img/brand/client8.jpeg';
+import client9 from '../assets/img/brand/client9.jpeg';
+import client10 from '../assets/img/brand/client10.jpeg';
+import client11 from '../assets/img/brand/client11.jpeg';
+import client12 from '../assets/img/brand/client12.jpeg';
+import client13 from '../assets/img/brand/client13.jpeg';
+import client14 from '../assets/img/brand/client14.jpeg';
+import client15 from '../assets/img/brand/client15.jpeg';
+import client16 from '../assets/img/brand/client16.jpeg';
+import client17 from '../assets/img/brand/client17.jpeg';
+import client18 from '../assets/img/brand/client18.jpeg';
+import client19 from '../assets/img/brand/client19.jpeg';
+import client20 from '../assets/img/brand/client20.jpeg';
+import client21 from '../assets/img/brand/client21.jpeg';
+import client22 from '../assets/img/brand/client22.jpeg';
+import client23 from '../assets/img/brand/client23.jpeg';
 import logo from '../assets/img/brand/logo.png';
 import slider1 from '../assets/img/brand/s-1.jpg';
 import slider2 from '../assets/img/brand/s-3.jpg';
 import slider3 from '../assets/img/brand/s-4.jpg';
-import about from 'assets/img/brand/aboutus.jpg';
-import manager from 'assets/img/brand/manager.jpg';
-import leader from 'assets/img/brand/leader.jpg';
-import leader2 from 'assets/img/brand/leader2.jpg';
-import productive from 'assets/img/brand/productive.jpg';
-import senior from 'assets/img/brand/senior.jpg';
+import about from 'assets/img/brand/aboutus.jpeg';
+import manager from 'assets/img/brand/manager.jpeg';
+import leader from 'assets/img/brand/leader.jpeg';
+import leader2 from 'assets/img/brand/leader2.jpeg';
+import productive from 'assets/img/brand/productive.jpeg';
+import senior from 'assets/img/brand/senior.jpeg';
 import logo1 from 'assets/img/brand/logo-1.jpg';
 //components
 import Slider from "react-slick";
@@ -87,7 +106,79 @@ function LandingPage(){
     },
     {
       id:5,
-      img:client2,
+      img:client5,
+    },
+    {
+      id:6,
+      img:client6,
+    },
+    {
+      id:7,
+      img:client7,
+    },
+    {
+      id:8,
+      img:client8,
+    },
+    {
+      id:9,
+      img:client9,
+    },
+    {
+      id:10,
+      img:client10,
+    },
+    {
+      id:11,
+      img:client11,
+    },
+    {
+      id:12,
+      img:client12,
+    },
+    {
+      id:13,
+      img:client13,
+    },
+    {
+      id:14,
+      img:client14,
+    },
+    {
+      id:15,
+      img:client15,
+    },
+    {
+      id:16,
+      img:client16,
+    },
+    {
+      id:17,
+      img:client17,
+    },
+    {
+      id:18,
+      img:client18,
+    },
+    {
+      id:19,
+      img:client19,
+    },
+    {
+      id:20,
+      img:client20,
+    },
+    {
+      id:21,
+      img:client21,
+    },
+    {
+      id:22,
+      img:client22,
+    },
+    {
+      id:23,
+      img:client23,
     }
     
   ]
@@ -704,7 +795,7 @@ function LandingPage(){
               
               {/*  service-2 end */}
               {/* service-2 start */}
-              <div id="service-3" className="mid-level-padding">
+              <div id="service-3" className="big-padding">
                 <div className="container">
                           <h4 className="head-subtitle">Our Clients</h4>
                           <h2 className="big-text" style={{marginLeft:0, color:"black"}}><strong>Excellence</strong> Services
@@ -719,7 +810,7 @@ function LandingPage(){
                           {newItems.map((value,key)=>(
                           <div className="col-sm-3 col-xs-6" key={key}>
                             <div style={{textAlign:"center"}}>
-                              <img src={value.img}  style={{width:"200px", height:"200px", objectFit:"cover"}}/>
+                              <img src={value.img}  style={{width:"200px", height:"auto", objectFit:"cover"}}/>
                             </div>
                           </div>
                           ))}

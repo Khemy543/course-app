@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React,{useState, useEffect} from "react";
 
 // reactstrap components
 import {
@@ -31,14 +31,62 @@ import {
   InputGroup,
   Row,
   Col,
+  FormFeedback
 } from "reactstrap";
+import API from '../../api.js';
+import swal from 'sweetalert';
 
-const Register = () => {
+
+
+const Register = (props) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [phone, setPhone] = useState('');
+  const [errors, setErrors] = useState({});
+
+  
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    let tempErrors = {};
+    if(password != confirmPassword){
+      tempErrors.confirmPassword = "Passwords do not match!"
+      setErrors(tempErrors)
+      return;
+    }
+    API.post('register-user',{
+      name, email, password, phone
+    })
+    .then(response=>{
+      swal({
+        title: "Success",
+        text:"Registration successful",
+        icon: "success",
+        buttons:false,
+        timer:3000
+      }).then((_)=>{
+        props.history.push('/auth/login')
+      })
+      /* API.post('auth/login',{
+        password,email
+      }).then(res=>{
+        localStorage.setItem('AuthToken', res.data.access_token);
+        props.histroy.push('/dashboard')
+      }) */
+    })
+    .catch(error=>{
+      if(error.response && error.response.status == 422){
+        setErrors(error.response.data.errors)
+      }
+    })
+  }
+
   return (
     <>
       <Col lg="6" md="8">
         <Card className="bg-secondary shadow border-0">
-          <CardHeader className="bg-transparent pb-5">
+          {/* <CardHeader className="bg-transparent pb-5">
             <div className="text-muted text-center mt-2 mb-4">
               <small>Sign up with</small>
             </div>
@@ -78,56 +126,72 @@ const Register = () => {
                 <span className="btn-inner--text">Google</span>
               </Button>
             </div>
-          </CardHeader>
+          </CardHeader> */}
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>Or sign up with credentials</small>
+              <small>Sign up with credentials</small>
             </div>
-            <Form role="form">
+            <Form role="form" onSubmit={handleSubmit}>
               <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
+                {/* <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
                       <i className="ni ni-hat-3" />
                     </InputGroupText>
-                  </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
-                </InputGroup>
+                  </InputGroupAddon> */}
+                  <Input placeholder="Name" type="text" value={name} onChange={e=>setName(e.target.value)} invalid={errors.name} />
+                  <FormFeedback>{errors.name}</FormFeedback>
+                {/* </InputGroup> */}
               </FormGroup>
               <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-email-83" />
-                    </InputGroupText>
-                  </InputGroupAddon>
                   <Input
                     placeholder="Email"
                     type="email"
                     autoComplete="new-email"
+                    value={email}
+                    onChange={e=>setEmail(e.target.value)}
+                    invalid={errors.email}
                   />
-                </InputGroup>
+                  <FormFeedback>{errors.email}</FormFeedback>
               </FormGroup>
               <FormGroup>
-                <InputGroup className="input-group-alternative">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-lock-circle-open" />
-                    </InputGroupText>
-                  </InputGroupAddon>
+                  <Input
+                    placeholder="Phone Number"
+                    type="text"
+                    value={phone}
+                    onChange={e=>setPhone(e.target.value)}
+                    invalid={errors.phone}
+                  />
+                  <FormFeedback>{errors.phone}</FormFeedback>
+              </FormGroup>
+              <FormGroup>
                   <Input
                     placeholder="Password"
                     type="password"
                     autoComplete="new-password"
+                    value={password}
+                    onChange={e=>setPassword(e.target.value)}
+                    invalid={errors.password}
                   />
-                </InputGroup>
+                  <FormFeedback>{errors.password}</FormFeedback>
               </FormGroup>
-              <div className="text-muted font-italic">
+              <FormGroup>
+                  <Input
+                    placeholder="Confirm Password"
+                    type="password"
+                    autoComplete="new-password"
+                    value={confirmPassword}
+                    onChange={e=>setConfirmPassword(e.target.value)}
+                    invalid={errors.confirmPassword}
+                  />
+                  <FormFeedback>{errors.confirmPassword}</FormFeedback>
+              </FormGroup>
+              {/* <div className="text-muted font-italic">
                 <small>
                   password strength:{" "}
                   <span className="text-success font-weight-700">strong</span>
                 </small>
-              </div>
+              </div> */}
               <Row className="my-4">
                 <Col xs="12">
                   <div className="custom-control custom-control-alternative custom-checkbox">
@@ -151,7 +215,7 @@ const Register = () => {
                 </Col>
               </Row>
               <div className="text-center">
-                <Button className="mt-4" color="primary" type="button">
+                <Button className="mt-4" color="primary" type="submit">
                   Create account
                 </Button>
               </div>

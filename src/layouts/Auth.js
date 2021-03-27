@@ -25,6 +25,7 @@ import AuthNavbar from "components/Navbars/AuthNavbar.js";
 import AuthFooter from "components/Footers/AuthFooter.js";
 
 import routes from "routes.js";
+import { AuthRedirection } from "ProtectedRoute";
 
 const Auth = (props) => {
   const mainContent = React.useRef(null);
@@ -46,7 +47,8 @@ const Auth = (props) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/auth") {
         return (
-          <Route
+          <AuthRedirection
+            {...props}
             path={prop.layout + prop.path}
             component={prop.component}
             key={key}
@@ -97,7 +99,7 @@ const Auth = (props) => {
           <Row className="justify-content-center">
             <Switch>
               {getRoutes(routes)}
-              <Redirect from="*" to="/auth/login" />
+              
             </Switch>
           </Row>
         </Container>

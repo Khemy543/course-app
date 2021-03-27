@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React,{useState, useEffect} from "react";
 
 // reactstrap components
 import {
@@ -31,14 +31,37 @@ import {
   InputGroup,
   Row,
   Col,
+  FormFeedback
 } from "reactstrap";
+import API from '../../api.js';
 
-const Login = () => {
+const Login = (props) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
+  const [errors, setErrors] = useState({});
+
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    API.post('auth/login',{
+      email, password
+    })
+    .then(response=>{
+      localStorage.setItem('AuthToken',response.data.access_token);
+      props.history.push('/user/index')
+    })
+    .catch(error=>{
+      if(error.response.status == 422){
+        setErrors(error.response.data.errors)
+      }
+    })
+  }
+
   return (
     <>
       <Col lg="5" md="7">
         <Card className="bg-secondary shadow border-0">
-          <CardHeader className="bg-transparent pb-5">
+          {/* <CardHeader className="bg-transparent pb-5">
             <div className="text-muted text-center mt-2 mb-3">
               <small>Sign in with</small>
             </div>
@@ -78,39 +101,33 @@ const Login = () => {
                 <span className="btn-inner--text">Google</span>
               </Button>
             </div>
-          </CardHeader>
+          </CardHeader> */}
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>Or sign in with credentials</small>
+              <small>Sign in with credentials</small>
             </div>
-            <Form role="form">
+            <Form role="form" onSubmit={handleSubmit}>
               <FormGroup className="mb-3">
-                <InputGroup className="input-group-alternative">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-email-83" />
-                    </InputGroupText>
-                  </InputGroupAddon>
                   <Input
                     placeholder="Email"
                     type="email"
                     autoComplete="new-email"
+                    value={email}
+                    invalid={errors.email}
+                    onChange={e=>setEmail(e.target.value)}
                   />
-                </InputGroup>
+                  <FormFeedback>{errors.email}</FormFeedback>
               </FormGroup>
               <FormGroup>
-                <InputGroup className="input-group-alternative">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-lock-circle-open" />
-                    </InputGroupText>
-                  </InputGroupAddon>
                   <Input
                     placeholder="Password"
                     type="password"
                     autoComplete="new-password"
+                    invalid={errors.password}
+                    value={password}
+                    onChange={e=>setPassword(e.target.value)}
                   />
-                </InputGroup>
+                  <FormFeedback>{errors.password}</FormFeedback>
               </FormGroup>
               <div className="custom-control custom-control-alternative custom-checkbox">
                 <input
@@ -126,7 +143,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="text-center">
-                <Button className="my-4" color="primary" type="button">
+                <Button className="my-4" color="primary" type="submit">
                   Sign in
                 </Button>
               </div>
