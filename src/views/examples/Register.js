@@ -29,6 +29,7 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
+  Spinner,
   Row,
   Col,
   FormFeedback
@@ -45,10 +46,12 @@ const Register = (props) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [errors, setErrors] = useState({});
+  const [isActive, setIsActive] = useState(false)
 
   
   const handleSubmit=(e)=>{
     e.preventDefault();
+    setIsActive(true)
     let tempErrors = {};
     if(password != confirmPassword){
       tempErrors.confirmPassword = "Passwords do not match!"
@@ -76,10 +79,11 @@ const Register = (props) => {
       }) */
     })
     .catch(error=>{
-      if(error.response && error.response.status == 422){
+      if(error && error.response && error.response.status == 422){
         setErrors(error.response.data.errors)
       }
     })
+    .finally((_)=>setIsActive(false))
   }
 
   return (
@@ -199,6 +203,7 @@ const Register = (props) => {
                       className="custom-control-input"
                       id="customCheckRegister"
                       type="checkbox"
+                      required
                     />
                     <label
                       className="custom-control-label"
@@ -215,9 +220,13 @@ const Register = (props) => {
                 </Col>
               </Row>
               <div className="text-center">
+                {!isActive?
                 <Button className="mt-4" color="primary" type="submit">
                   Create account
                 </Button>
+                :
+                <Button className="mt-4" color="primary" type="button" disabled><Spinner size="sm"/></Button>
+                }
               </div>
             </Form>
           </CardBody>

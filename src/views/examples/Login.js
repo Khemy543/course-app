@@ -21,45 +21,57 @@ import React,{useState, useEffect} from "react";
 import {
   Button,
   Card,
-  CardHeader,
+  Row,
   CardBody,
   FormGroup,
   Form,
   Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Row,
+  Spinner,
   Col,
   FormFeedback
 } from "reactstrap";
 import API from '../../api.js';
+import ToastNotification from 'components/Toast.js';
+import { MyContextConsumer } from '../../context.js'
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
   const [errors, setErrors] = useState({});
+  const [isActive, setIsActive] = useState(false)/* 
+  const { state } = React.useContext(MyContext); */
 
-
+ /*  useEffect(()=>{
+    console.log(state)
+  },[]) */
+ 
   const handleSubmit=(e)=>{
     e.preventDefault();
+    setIsActive(true)
     API.post('auth/login',{
       email, password
     })
     .then(response=>{
       localStorage.setItem('AuthToken',response.data.access_token);
-      props.history.push('/user/index')
+      window.location.reload("/");
     })
     .catch(error=>{
-      if(error.response.status == 422){
+      console.log(error.response)
+      /* if(error.response.status == 422){
         setErrors(error.response.data.errors)
-      }
+      } */
     })
+    .finally((_)=>{setIsActive(false)})
   }
 
   return (
     <>
       <Col lg="5" md="7">
+        <ToastNotification 
+          color="danger"
+          title="Error"
+          text="Here is an error"
+        />
         <Card className="bg-secondary shadow border-0">
           {/* <CardHeader className="bg-transparent pb-5">
             <div className="text-muted text-center mt-2 mb-3">
@@ -143,9 +155,13 @@ const Login = (props) => {
                 </label>
               </div>
               <div className="text-center">
-                <Button className="my-4" color="primary" type="submit">
+                {!isActive?
+                <Button className="my-4" color="primary"  type="submit">
                   Sign in
                 </Button>
+                :
+                <Button className="my-4" color="primary" disabled><Spinner size="sm" /></Button>
+                }
               </div>
             </Form>
           </CardBody>

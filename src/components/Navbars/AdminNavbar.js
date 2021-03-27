@@ -34,6 +34,7 @@ import {
   Container,
   Media,
 } from "reactstrap";
+import { MyContextConsumer } from '../../context.js';
 
 const AdminNavbar = (props) => {
   return (
@@ -59,6 +60,8 @@ const AdminNavbar = (props) => {
             </FormGroup>
           </Form>
           <Nav className="align-items-center d-none d-md-flex" navbar>
+            <MyContextConsumer>
+              {value=>(
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
                 <Media className="align-items-center">
@@ -73,7 +76,7 @@ const AdminNavbar = (props) => {
                   </span>
                   <Media className="ml-2 d-none d-lg-block">
                     <span className="mb-0 text-sm font-weight-bold">
-                      Jessica Jones
+                      {value.user.name}
                     </span>
                   </Media>
                 </Media>
@@ -99,12 +102,14 @@ const AdminNavbar = (props) => {
                   <span>Support</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                <DropdownItem  onClick={() =>value.logout()}>
                   <i className="ni ni-user-run" />
                   <span>Logout</span>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            )}
+            </MyContextConsumer>
           </Nav>
         </Container>
       </Navbar>
