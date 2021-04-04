@@ -10,6 +10,10 @@ import {
   Nav,
   Container,
   Button,
+  Card,
+  CardBody,
+  CardImg,
+  CardText,CardTitle,
   Col,
   Row
  
@@ -74,12 +78,9 @@ var settings = {
 
 function LandingPage(){
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [color, setColor] = React.useState('white')
+  const [color, setColor] = React.useState('white');
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
-  const [registerCollpase, setRegisterCollapse] = React.useState(false);
-  const [LoginOpen, setLoginOpen] = React.useState(false);
-  const [loginCollapse, setLoginCollapse] = React.useState(false);
+  
 
   const [name, setName]=React.useState("");
   const [email, setEmail]=React.useState("");
@@ -183,6 +184,33 @@ function LandingPage(){
     
   ]
 
+  const courses = [
+    {
+      id:1,
+      title:"Director Leadership Effectiveness in the Public Sector",
+      aim:"To draw attention to essential leadership skills required of directors of MDAs in evolving a professional public sector organisation that delivers excellence to its stakeholders;",
+      duration:"3"
+    },
+    {
+      id:2,
+      title:"Directing Effectively in an Environment of Political Influence",
+      aim:"To emphasize the core skills and mindset required for succeeding as professionals and technocrats in an environment heavily dominated and influenced by politicians;",
+      duration:"2"
+    },
+    {
+      id:3,
+      title:"",
+      aim:"",
+      duration:""
+    },
+    {
+      id:4,
+      title:"",
+      aim:"",
+      duration:""
+    }
+  ]
+
 
 
   React.useEffect(() => {
@@ -230,9 +258,9 @@ function LandingPage(){
             <NavbarBrand
             data-placement="bottom"
             >
-            <a href="/auth/landing-page">
+            <a href="/">
             <h3 className={color} style={{fontWeight:300, textDecoration:"none", textTransform:"capitalize", fontSize:"30px"}}>
-            {/* <img alt="Course App" src={logo1} style={{height:"55px", width:"auto"}}/> */} <span style={{fontWeight:700}}>GRS</span> Consulting
+            {/* <img alt="Course App" src={logo1} style={{height:"55px", width:"auto"}}/> */} <span style={{fontWeight:700}}>GSR</span> Consulting
             
             </h3>
             </a>
@@ -248,7 +276,7 @@ function LandingPage(){
               }}
               aria-expanded={collapseOpen}
             >
-            <i className="fa fa-bars" style={{color:"#17d0cf"}}/>
+            <i className="fa fa-bars" style={{color:"white"}}/>
             </div>
           <Collapse
             className="justify-content-end"
@@ -300,8 +328,7 @@ function LandingPage(){
         </Container>
       </Navbar> 
       
-      <div 
-            onClick={()=>handleAppClick()}>
+      <div onClick={()=>handleAppClick()}>
         <section id="Home">
               {/*nav end*/}
               <div id="slider">
@@ -517,21 +544,21 @@ function LandingPage(){
                   <div className="row">
                     <div className="col-md-6">
                         <div className="left-section">
-                          <img
+                          {/* <img
                             src={about}
                             width={542}
                             height={470}
                             style={{objectFit:"cover"}}
                             alt="pineapple"
                             className="element-center"
-                          />
+                          /> */}
                         </div>
                     </div>
                     <div className="col-sm-6" >
                       <div className="right-section">
                       <h4 className="head-subtitle">About Us</h4>
                       <h2 className="big-text" style={{marginLeft:"0px"}}>
-                        We Are <strong>GRS </strong>Consulting
+                        We Are <strong>GSR </strong>Consulting
                         
                         </h2>
                         <hr />
@@ -795,7 +822,7 @@ function LandingPage(){
               
               {/*  service-2 end */}
               {/* service-2 start */}
-              <div id="service-3" className="big-padding">
+              <div id="service-3" className="pt-8">
                 <div className="container">
                           <h4 className="head-subtitle">Our Clients</h4>
                           <h2 className="big-text" style={{marginLeft:0, color:"black"}}><strong>Excellence</strong> Services
@@ -805,7 +832,7 @@ function LandingPage(){
                     <div className="col-sm-12">
                       <div className="bottom-section text-center">
                         <Row>
-                          <Col md="12" >
+                        <Col md="11" className="ml-auto mr-auto">
                         <Slider {...settings} infinite={newItems.length>4}>
                           {newItems.map((value,key)=>(
                           <div className="col-sm-3 col-xs-6" key={key}>
@@ -826,277 +853,45 @@ function LandingPage(){
               {/* service-2 end */}
             </section>
             {/*  services end*/}
-            {/* <section id="portfolio">
+            <section id="portfolio">
               <div id="portfolio3" className="mid-level-padding">
                 <div className="container">
-                  <div className="row text-center">
+                  {/* <div className="row">
                     <div className="col-xs-12">
                       <div className="section-top-heading">
-                        <h2 className="big-text">How it works</h2>
+                        <h4 className="head-subtitle">Search our courses</h4>
+                        <h2 className="big-text" style={{marginLeft:0}}>Browse Our <strong>Best Courses</strong></h2>
+                        <hr/>
                       </div>
                     </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-sm-4 wow fadeInLeft">
-                      <div className="pricing-table">
-                        <div className="type">
-                          <h4>Step one</h4>
-                        </div>
-                        <div className="price">
-                          <div className="row" style={{marginRight:"10px", marginLeft:"10px"}}>
-                            <div className="col-xs-4 col-md-4">
-                              <span className="fa fa-user fa-2x" />
-                            </div>
-                            <div className="col-xs-8 col-md-8">
-                              <p>
-                              Upload ad
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <ul className="packages">
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Provide personal or organization details
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Make sure personal details are valid
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Upload the required documents
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Submit details
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-sm-4 wow fadeInUp" data-wow-duration="3s">
-                      <div className="pricing-table black">
-                        <div className="type">
-                          <h4>Step two</h4>
-                        </div>
-                        <div className="price">
-                          <div className="row" style={{marginRight:"10px", marginLeft:"10px"}}>
-                            <div className="col-xs-4 col-md-4">
-                              <span className="fa fa-sign-in fa-2x" />
-                            </div>
-                            <div className="col-xs-8 col-md-8">
-                              <p>Log into your kokrokoo account</p>
-                            </div>
-                          </div>
-                        </div>
-                        <ul className="packages">
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Click "create campaign" button{" "}
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                             Select a media house and upload ad file.
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Schedule ad production times
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Make payment.
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Submit ad
-                          </li>
-                        </ul>
-                        <a
-                          href="/auth/login-page"
-                          className="btn button btn-block text-uppercase"
-                          style={{borderRadius:"20px"}}
-                        >
-                          Get Started
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-sm-4 wow fadeInRight">
-                      <div className="pricing-table">
-                        <div className="type">
-                          <h4>Step three</h4>
-                        </div>
-                        <div className="price">
-                          <div className="row" style={{marginRight:"10px", marginLeft:"10px"}}>
-                            <div className="col-xs-4 col-md-4">
-                              <span className="fa fa-envelope fa-2x" />
-                            </div>
-                            <div className="col-xs-8 col-md-8">
-                              <p>
-                                Selected media house will send a confirmation
-                                email/sms for approval.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <ul className="packages">
-                          
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Ad is reviewed by media house
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Confirmation email and sms is sent to you
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Ad is published live
-                          </li>
-                          <li>
-                            <i className="fa fa-check" aria-hidden="true" />
-                            Track your ad anytime
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                  </div> */}
+                  <h4 className="head-subtitle">Search our courses</h4>
+                      <h2 className="big-text" style={{marginLeft:"0px"}}>
+                      Browse Our <strong>Best Courses</strong>
+                    </h2>
+                    <hr/>
+                  <Row>
+                    {courses.map((value, key)=>(
+                    <Col md="3">
+                    <Card className="main_card" style={{overflow:"hidden"}}>
+                    <CardImg top width="100%" src={about} alt="Card image cap" className="card_image"/>
+                    <a style={{textDecoration:"none"}} className="next" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
+                    <CardBody>
+                      <CardTitle tag="h5">Card Title</CardTitle>
+                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                      <CardText>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                      </CardText>
+                    </CardBody>
+                  </Card>
+                    </Col>
+                    ))}
+                  </Row>
                 </div>
               </div>
-            </section> */}
-            {/* payment */}
-           {/*  <div id="service-3" className="mid-level-padding">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-xs-12 wow slideInLeft">
-                      <div className="top-section vertical-heading">
-                        <span>Payment</span>
-                        <h2
-                          className="big-text"
-                          style={{color:"black"}}
-                        >
-                          Payment <strong>Options</strong>
-                          <br />
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row wow fadeInUp" data-wow-duration="2s" style={{marginTop:"50px"}}>
-                    <div className="col-sm-12">
-                      <div className="bottom-section text-center">
-                        <div className="row">
-                          <div className="col-sm-3 col-xs-6">
-                          <img 
-                              src={require("assets/img/brand/Visa-MasterCard.jpg")}
-                              alt="visa-master"
-                            />
-                          </div>
-                          <div className="col-sm-3 col-xs-6">
-                            <img 
-                              src={require("assets/img/brand/mtn.png")}
-                              alt="mtn"
-                            />
-                          </div>
-                          <div className="col-sm-3 col-xs-6">
-                          <img 
-                              src={require("assets/img/brand/voda.jpeg")}
-                              alt="voda"
-                            />
-                          </div>
-                          <div className="col-sm-3 col-xs-6">
-                          <img 
-                              src={require("assets/img/brand/AirtelTigo.jpeg")}
-                              alt="airtel"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-            {/* contact us start */}
-            <section id="contact-us">
-              {/*contact-us-1 start */}
-              {/* <div id="contact-us1">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-sm-6 padding wow slideInLeft">
-                      <div className="left-section">
-                        <div className="hovereffect">
-                          <a href="https://www.linkedin.com/company/kokrokoo-advertising-partners-webapp" target="_blank" rel="noopener noreferrer">
-                            <img
-                              src="https://www.themesindustry.com/html/riwa/images/insta1.jpg"
-                              alt="social"
-                            />
-                            <i className="fa fa-linkedin" aria-hidden="true" />
-                          </a>
-                          <div className="overlay">
-                            <a className="social" href="https://www.facebook.com/kokrokooad/" target="_blank" rel="noopener noreferrer">
-                              <div>
-                                <i className="fa fa-facebook mr-2"/>
-                                <span style={{fontSize:"14px", fontWeight:700}}>
-                                  Follow Us
-                                </span>
-                              </div>
-                              <div>
-                                <p style={{marginLeft:"10px", color:"white"}}>Kokrokoo is coming soon! </p>
-                                <div className="subscriber">
-                                  <span className="btn button" style={{borderRadius:"20px"}}>
-                                    visit page
-                                  </span>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 padding wow slideInRight">
-                      <div className="right-section">
-                        <a className="social" href="https://twitter.com/kokrokooad?s=09" target="_blank" rel="noopener noreferrer">
-                          <div>
-                            <i
-                              className="fa fa-twitter mr-2"
-                            />
-                            <span style={{fontSize:"14px", fontWeight:700}}>Follow Us</span>
-                          </div>
-                          <div>
-                            <p style={{color:"white"}}>Kokrokoo is coming soon.</p>
-                            <div className="subscriber">
-                              <span className="btn  button" style={{borderRadius:"20px"}}>visit page</span>
-                            </div>
-                          </div>
-                        </a>
-                        <a
-                          className="insta-2-3"
-                          href="https://instagram.com/kokrokooad?igshid=1sxxfctr88krt"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="pull-left left">
-                            <img
-                              src="https://www.themesindustry.com/html/riwa/images/insta2.jpg"
-                              className="pull-left"
-                              alt="social"
-                            />
-                          </div>
-                          <div className="pull-right right">
-                            <img
-                              src="https://www.themesindustry.com/html/riwa/images/insta3.jpg"
-                              className="pull-right"
-                              alt="social"
-                            />
-                          </div>
-                          <i className="fa fa-instagram" aria-hidden="true" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
               {/*contact-us-1 end*/}
               {/* contact-us2 start */}
-              <div id="contact-us2" className="mid-level-padding">
+              <div id="contact-us" className="mid-level-padding">
                 <div className="container">
                   <div className="row">
                     <div className="col-sm-6">

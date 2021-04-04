@@ -361,4 +361,25 @@
   padding:0px;
   cursor: pointer;
 }
+.main_card:hover .next{
+  display: block;
+}
 
+.card_image{
+  transition: transform .2s;
+  overflow: hidden;
+}
+.main_card:hover .card_image{
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+.next{
+  color: white;
+  position: absolute; 
+  top:10px;
+  right:10px; 
+  font-weight:700 !important;
+  cursor: pointer;
+  display: none;
+}

@@ -31,20 +31,17 @@ import {
   FormFeedback
 } from "reactstrap";
 import API from '../../api.js';
-import ToastNotification from 'components/Toast.js';
-import { MyContextConsumer } from '../../context.js'
+import { addNotification } from '../../actions/indexActions.js'
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
   const [errors, setErrors] = useState({});
-  const [isActive, setIsActive] = useState(false)/* 
-  const { state } = React.useContext(MyContext); */
+  const [isActive, setIsActive] = useState(false)
 
- /*  useEffect(()=>{
-    console.log(state)
-  },[]) */
- 
+useEffect(()=>{
+  console.log(props.location.state.from)
+},)
   const handleSubmit=(e)=>{
     e.preventDefault();
     setIsActive(true)
@@ -53,13 +50,30 @@ const Login = (props) => {
     })
     .then(response=>{
       localStorage.setItem('AuthToken',response.data.access_token);
-      window.location.reload("/");
+        if(!props.location.state.from){
+          window.location.href=`https://course-online-app.herokuapp.com${props.location.state.from}`;
+        }
+        else{
+          window.location.href='https://course-online-app.herokuapp.com/';
+        }
+      
+      /* window.location.reload("/"); */
     })
     .catch(error=>{
-      console.log(error.response)
-      /* if(error.response.status == 422){
-        setErrors(error.response.data.errors)
-      } */
+      if(error.response && error.response.status == 401){
+      return props.dispatch(addNotification({
+        title:"Invalid Credentials",
+        text:"Please check email and password",
+        color:'danger'
+      }))
+    }
+    if(error){
+      return props.dispatch(addNotification({
+        title:"Error!",
+        text:"Something happened, please try again later",
+        color:'danger'
+      }))
+    }
     })
     .finally((_)=>{setIsActive(false)})
   }
@@ -67,53 +81,7 @@ const Login = (props) => {
   return (
     <>
       <Col lg="5" md="7">
-        <ToastNotification 
-          color="danger"
-          title="Error"
-          text="Here is an error"
-        />
         <Card className="bg-secondary shadow border-0">
-          {/* <CardHeader className="bg-transparent pb-5">
-            <div className="text-muted text-center mt-2 mb-3">
-              <small>Sign in with</small>
-            </div>
-            <div className="btn-wrapper text-center">
-              <Button
-                className="btn-neutral btn-icon"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <img
-                    alt="..."
-                    src={
-                      require("../../assets/img/icons/common/github.svg")
-                        .default
-                    }
-                  />
-                </span>
-                <span className="btn-inner--text">Github</span>
-              </Button>
-              <Button
-                className="btn-neutral btn-icon"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <img
-                    alt="..."
-                    src={
-                      require("../../assets/img/icons/common/google.svg")
-                        .default
-                    }
-                  />
-                </span>
-                <span className="btn-inner--text">Google</span>
-              </Button>
-            </div>
-          </CardHeader> */}
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
               <small>Sign in with credentials</small>

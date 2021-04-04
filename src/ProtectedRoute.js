@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 const authenticated = localStorage.getItem('AuthToken')
-console.log(authenticated,"auth")
 
 export const ProtectedRoute =({component: Component, ...rest}) =>{
     return(
         <Route {...rest} render={
             (props)=>{
-                if(authenticated){
-                    return <Component {...props}/>
+                if(authenticated || props.authenticated){
+                    return <Component {...props} {...rest}/>
                 }else{
                     return <Redirect to={
                         {
@@ -35,7 +34,7 @@ export const AuthRedirection = ({component: Component, ...rest}) =>{
                         }
                     } />
                 }else{
-                    return <Component {...props} />
+                    return <Component {...props} {...rest} />
                 }
             }
         }/>

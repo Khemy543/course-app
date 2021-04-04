@@ -19,6 +19,8 @@ import React from "react";
 import { useLocation, Route, Switch, Redirect } from "react-router-dom";
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
+import ToastNotification from 'components/Toast.js'
+import { connect } from 'react-redux';
 
 // core components
 import AuthNavbar from "components/Navbars/AuthNavbar.js";
@@ -61,7 +63,16 @@ const Auth = (props) => {
   };
 
   return (
-    <>
+    <div>
+      
+    <ToastNotification 
+        {...props}
+        color={props.notification.color}
+        title={props.notification.title}
+        text={props.notification.text}
+        showToast={props.showToast}
+        />
+        
       <div className="main-content" ref={mainContent}>
         <AuthNavbar />
         <div className="header bg-gradient-info py-7 py-lg-8">
@@ -70,7 +81,7 @@ const Auth = (props) => {
               <Row className="justify-content-center">
                 <Col lg="5" md="6">
                   <h1 className="text-white">Welcome!</h1>
-                  <p className="text-lead text-light">
+                  <p className="text-lead text-light" style={{fontWeight:600}}>
                     Use these awesome forms to login or create new account in
                     your project for free.
                   </p>
@@ -105,8 +116,15 @@ const Auth = (props) => {
         </Container>
       </div>
       <AuthFooter />
-    </>
+    </div>
   );
 };
 
-export default Auth;
+function mapStateToProps(state, ownProps) {
+  return {
+    notification: state.notification,
+    showToast: !(state.notification && Object.keys(state.notification).length === 0 && state.notification.constructor === Object)
+  };
+}
+
+export default connect(mapStateToProps)(Auth);

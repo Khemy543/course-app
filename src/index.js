@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { MyContexProvider } from './context.js';
 
 import "assets/plugins/nucleo/css/nucleo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -15,16 +14,32 @@ import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
 import LandingPage from "views/LandingPage";
 
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
+import { getuserData } from "actions/userActions";
+import CourseDetails from "views/examples/CourseDetails";
+import Payment from "layouts/Payment";
+
+
+const store =  configureStore();
+
+if(localStorage.getItem('AuthToken')){
+  store.dispatch(getuserData);
+}
+
+
+
 ReactDOM.render(
-  <MyContexProvider>
+  <Provider store={store}>
     <BrowserRouter>
         <Switch>
         <Route path="/user" render={(props) => <AdminLayout {...props} />} />
         <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
-        <AuthRedirection path="/" component={LandingPage} />{/* 
-        <Redirect from="/" to="/admin/index" /> */}
+        <AuthRedirection exact path="/" component={LandingPage} />
+        <Route path="/payment" render={(props) => <Payment {...props} />} />
+        <AuthRedirection exact path="/course/:id/details" component={CourseDetails} />
         </Switch>
     </BrowserRouter>
-  </MyContexProvider>,
+    </Provider>,
   document.getElementById("root")
 );

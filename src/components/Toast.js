@@ -1,15 +1,13 @@
+import { addNotification } from 'actions/indexActions';
 import React from 'react';
 import { Toast, ToastBody, ToastHeader } from 'reactstrap';
-import { MyContextConsumer } from '../context.js';
 
 const ToastNotification = (props) => {
   return (
-    <MyContextConsumer>
-    {value=>(
-    <div style={{zIndex:1000}}>
-      <div className={`p-3 bg-"${props.color} my-2 rounded white`}>
-        <Toast isOpen={value.showToast}>
-          <ToastHeader>
+    <div style={{zIndex:2000, position:"absolute", top:30, right:30}}>
+      <div className={`p-3 bg-${props.color} my-2 rounded white`}>
+        <Toast isOpen={props.showToast} transition>
+          <ToastHeader toggle={()=>props.dispatch(addNotification({}))}>
             {props.title}
           </ToastHeader>
           <ToastBody>
@@ -18,8 +16,6 @@ const ToastNotification = (props) => {
         </Toast>
       </div>
     </div>
-    )}
-    </MyContextConsumer>
   );
 };
 

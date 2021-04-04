@@ -36,9 +36,9 @@ const AdminNavbar = () => {
       <Navbar className="navbar-top navbar-horizontal navbar-dark" expand="md">
         <Container className="px-4">
           <NavbarBrand>
-          <a href="/auth/landing-page">
+          <a href="/">
           <h3 style={{fontWeight:300, textDecoration:"none", textTransform:"capitalize", fontSize:"30px",color:"white"}}>
-            {/* <img alt="Course App" src={logo1} style={{height:"55px", width:"auto"}}/> */} <span style={{fontWeight:700}}>GRS</span> Consulting
+            {/* <img alt="Course App" src={logo1} style={{height:"55px", width:"auto"}}/> */} <span style={{fontWeight:700}}>GSR</span> Consulting
             
             </h3>
             </a>

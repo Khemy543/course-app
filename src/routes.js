@@ -22,6 +22,9 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
+import UserInformation from "views/payment/userInformation";
+import AccountDetails from "views/payment/AccountDetails";
+import VerifyPayment from "views/payment/verifyPayment";
 
 var routes = [
   {
@@ -31,7 +34,7 @@ var routes = [
     component: Index,
     layout: "/user",
   },
-  {
+  /* {
     path: "/icons",
     name: "Icons",
     icon: "ni ni-planet text-blue",
@@ -58,7 +61,7 @@ var routes = [
     icon: "ni ni-bullet-list-67 text-red",
     component: Tables,
     layout: "/user",
-  },
+  }, */
   {
     path: "/login",
     name: "Login",
@@ -72,6 +75,24 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: Register,
     layout: "/auth",
+  },
+  {
+    path:'/user-information',
+    name:'User Information',
+    component: UserInformation,
+    layout:"/payment"
+  },
+  {
+    path:'/account',
+    name:"Account Details",
+    component:AccountDetails,
+    layout:"/payment"
+  },
+  {
+    path: '/verify',
+    name :'Payment',
+    component :VerifyPayment,
+    layout:'/payment'
   },
 ];
 export default routes;
