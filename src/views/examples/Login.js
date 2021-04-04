@@ -39,9 +39,9 @@ const Login = (props) => {
   const [errors, setErrors] = useState({});
   const [isActive, setIsActive] = useState(false)
 
-useEffect(()=>{
+/* useEffect(()=>{
   console.log(props.location.state.from)
-},)
+},) */
   const handleSubmit=(e)=>{
     e.preventDefault();
     setIsActive(true)
@@ -50,7 +50,7 @@ useEffect(()=>{
     })
     .then(response=>{
       localStorage.setItem('AuthToken',response.data.access_token);
-        if(!props.location.state.from){
+        if((props.location.state && props.location.state.from)){
           window.location.href=`https://course-online-app.herokuapp.com${props.location.state.from}`;
         }
         else{
