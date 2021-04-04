@@ -187,24 +187,18 @@ function LandingPage(){
   const courses = [
     {
       id:1,
-      title:"Director Leadership Effectiveness in the Public Sector",
+      title:"Modules 1",
       aim:"To draw attention to essential leadership skills required of directors of MDAs in evolving a professional public sector organisation that delivers excellence to its stakeholders;",
       duration:"3"
     },
     {
       id:2,
-      title:"Directing Effectively in an Environment of Political Influence",
+      title:"Modules 2",
       aim:"To emphasize the core skills and mindset required for succeeding as professionals and technocrats in an environment heavily dominated and influenced by politicians;",
       duration:"2"
     },
     {
       id:3,
-      title:"",
-      aim:"",
-      duration:""
-    },
-    {
-      id:4,
       title:"",
       aim:"",
       duration:""
@@ -872,12 +866,12 @@ function LandingPage(){
                     <hr/>
                   <Row>
                     {courses.map((value, key)=>(
-                    <Col md="3">
+                    <Col md="4">
                     <Card className="main_card" style={{overflow:"hidden"}}>
                     <CardImg top width="100%" src={about} alt="Card image cap" className="card_image"/>
                     <a style={{textDecoration:"none"}} className="next" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
                     <CardBody>
-                      <CardTitle tag="h5">Card Title</CardTitle>
+                      <CardTitle tag="h5">Course Title</CardTitle>
                       <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
                       <CardText>
                         <small className="text-muted">Last updated 3 mins ago</small>

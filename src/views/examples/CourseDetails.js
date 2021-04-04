@@ -122,8 +122,11 @@ export default function CourseDetails(){
           <Row>
             <Col>
             <div>
-              <h1>2021 Complete Python Bootcamp From Zero to Hero in Python</h1>
-              <p>Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games</p>
+              <h1>Senior-Level Public Leadership Program </h1>
+              <p>
+              Every government has good intentions to deliver public services at a level and quality expected by the electorate. However, in the context of limited resources amidst unending social needs, and worrying levels of inefficiency, and a public sector staffed with employees with lackadaisical attitudes towards work, realising such objective has remained a mirage for most governments. At the core of realising government’s electioneering manifesto are public sector senior managers (directors) who are involved in designing and implementing strategies and making crucial decisions on resource allocation. To the extent that such leaders exercise effective leadership, display excellence-orientation (commitment to working tirelessly to attain the highest level of quality), and identify and confront inhibiting habits and attitudes, and pursue the tenets of public service ethics and values, such objective can be fulfilled. 
+
+              </p>
               <p>4.6 <i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/>
                 (3555 ratings)
               </p>
@@ -133,12 +136,20 @@ export default function CourseDetails(){
               <br/>
             <div style={{backgroundColor:"#EEEEEE", padding:"15px"}}>
               <h1>What you'll learn</h1>
-              <p><i className="fa fa-check mr-2" />Learn to use Python professionally, learning both Python 2 and Python 3!</p>
-              <p><i className="fa fa-check mr-2" />Learn to use Python professionally, learning both Python 2 and Python 3!</p>
-              <p><i className="fa fa-check mr-2" />Learn to use Python professionally, learning both Python 2 and Python 3!</p>
-              <p><i className="fa fa-check mr-2" />Learn to use Python professionally, learning both Python 2 and Python 3!</p>
-              <p><i className="fa fa-check mr-2" />Learn to use Python professionally, learning both Python 2 and Python 3!</p>
-
+              <h4><i className="fa fa-check mr-2" />Module 1</h4>
+              <p>Director Leadership Effectiveness in the Public Sector</p>
+              <p><strong>Aim :</strong>To draw attention to essential leadership skills required of directors of MDAs in evolving a professional public sector organisation that delivers excellence to its stakeholders;</p>
+              <small>Duration: 3 days</small>
+              <br/>
+              <h4><i className="fa fa-check mr-2" />Module 2</h4>
+              <p>Directing Effectively in an Environment of Political Influence</p>
+              <p><strong>Aim :</strong>To emphasize the core skills and mindset required for succeeding as professionals and technocrats in an environment heavily dominated and influenced by politicians;</p>
+              <small>Duration: 2 days</small>
+              <br/>
+              <h4><i className="fa fa-check mr-2" />Module 3</h4>
+              <p>Exploiting the Benefits of New Public Management</p>
+              <p><strong>Aim :</strong>To introduce the basic tenets of new public management (NPM) to directors of MDAs as a way of driving efficiency and cost containment in the public sector.</p>
+              <small>Duration: 3 days</small>
             </div>
              </Col>
             <Col md="4">
