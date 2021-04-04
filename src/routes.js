@@ -25,6 +25,7 @@ import Icons from "views/examples/Icons.js";
 import UserInformation from "views/payment/userInformation";
 import AccountDetails from "views/payment/AccountDetails";
 import VerifyPayment from "views/payment/verifyPayment";
+import Transactions from "views/examples/transactions";
 
 var routes = [
   {
@@ -34,14 +35,21 @@ var routes = [
     component: Index,
     layout: "/user",
   },
-  /* {
+  {
+    path: '/transactions',
+    name: 'Transactions',
+    icon: 'ni ni-briefcase-24',
+    component: Transactions,
+    layout: '/user'
+  },
+ /* {
     path: "/icons",
     name: "Icons",
     icon: "ni ni-planet text-blue",
     component: Icons,
     layout: "/user",
   },
-  {
+   {
     path: "/maps",
     name: "Maps",
     icon: "ni ni-pin-3 text-orange",
