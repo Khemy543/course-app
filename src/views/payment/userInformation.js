@@ -96,7 +96,7 @@ import {
                                 >Try Free Now ! <i className="fa fa-chevron-right"/></h4>
                             </Col> */}
                         </Row>
-                        <p style={{textAlign:"center", marginTop:"15px", fontSize:"12px",fontWeight:600}}>Contact <a style={{color:"#6ec7e0"}} href="mailto://support@martekgh.com">support@martekgh.com</a> for any questions</p>
+                        <p style={{textAlign:"center", marginTop:"15px", fontSize:"12px",fontWeight:600}}>Contact <a style={{color:"#6ec7e0"}} href="mailto://enquiries@strategicresourcers.com">enquiries@strategicresourcers.com.com</a> for any questions</p>
                         </Form>
                     </CardBody>
                     </Card>
