@@ -55,8 +55,11 @@ import leader2 from 'assets/img/brand/leader2.jpeg';
 import productive from 'assets/img/brand/productive.jpeg';
 import senior from 'assets/img/brand/senior.jpeg';
 import logo1 from 'assets/img/brand/logo-1.jpg';
+import face2 from 'assets/img/brand/face2.jpg';
+import face3 from 'assets/img/brand/face3.jpg';
+import face1 from 'assets/img/brand/face1.jpg';
 //components
-import Slider from "react-slick";
+import Slider from "react-slick"; 
 
 var settings = {
   dots: true,
@@ -538,14 +541,15 @@ function LandingPage(){
                   <div className="row">
                     <div className="col-md-6">
                         <div className="left-section">
-                          {/* <img
-                            src={about}
+                          <img
+                            src={face3}
                             width={542}
                             height={470}
                             style={{objectFit:"cover"}}
                             alt="pineapple"
                             className="element-center"
-                          /> */}
+                          />
+                          <div className="overlay" style={{width:542, height:470}}></div>
                         </div>
                     </div>
                     <div className="col-sm-6" >
@@ -561,7 +565,8 @@ function LandingPage(){
                         </p>
                         
                         <h4>Our Passion</h4>
-                        <p>We take a great delight in seeing organizations become efficient and deliver results through the deployment of well-developed.
+                        <p>
+                        We take a great delight in seeing organizations become efficient and deliver results through the deployment of well-developed and motivated employees, particularly top executives.
                         </p>
                         <h4>Our Vision</h4>
                         <p>We exist to deliver affordable, quality and relevant management and leadership training and consultancy solutions, employing modern adult learning tools and methods</p>
@@ -643,35 +648,29 @@ function LandingPage(){
                 <div id="responsiveTabsDemo">
                   <ul className="text-center">
                     <li>
-                      <a href="#tab-1"><strong>Success-Prone</strong> Manager</a>
+                      <a href="#tab-1"><strong>Training</strong></a>
                     </li>
                     <li>
-                      <a href="#tab-2"><strong>Turbulence-Proof</strong> Leader</a>
-                    </li>
-                    <li>
-                      <a href="#tab-3">General <strong>Capacity & Productivity Enhancement</strong></a>
-                    </li>
-                    <li>  
-                      <a href="#tab-4"><strong>Senior-Level Public</strong></a>
+                      <a href="#tab-2"><strong>Consultancy</strong></a>
                     </li>
                   </ul>
                   <div id="tab-1">
                     <div className="container">
                       <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-6" style={{padding:0}}>
                           <img
-                            src={manager}
+                            src={face2}
                             width={542}
-                            height={470}
                             alt="pineapple"
                             className="element-center"
-                            style={{objectFit:'cover'}}
+                            style={{objectFit:'cover',height:"100%"}}
                           />
+                          <div className="overlay"></div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6" style={{padding:0}}>
                           <div className="tabs-bg">
-                            <h3>The Success-Prone Manager (Management Development Training)</h3>
-                            <div className="list">
+                            <h3>Our Training Philosophy & Pedagogy</h3>
+                            {/* <div className="list">
                             <ul>
                               <li><p>Entry Level Mastery (Team Leaders and New Managers)</p> </li>
                               <li><p>Intermediate Level Mastery (Middle Managers) </p> </li>
@@ -680,14 +679,34 @@ function LandingPage(){
                               <li><p>Management/CEO Level Mastery (CEOs, MDs, GMs, DGs & Chief Directors)</p> </li>
                               <li><p>Board Level Mastery (Board Members)</p> </li>
                             </ul>
-                            </div>
+                            </div> */}
+                            <p>
+                              We operate a philosophy of training built on a methodology that incorporates a variety of relevant practical, reflective sessions involving exercises and activities. <br/>This means that training sessions are necessarily followed by a list of:
+                            </p>
+                            <p>
+                            a)     <strong>Key Ideas</strong> that can be applied to the work situation;
+                            </p>
+                            <p>
+                            b)     <strong>Learning & Growth Points</strong> outlining the <strong>habits, attitudes and behaviours (HABs)</strong> that delegates would need to <strong>stop, start or strengthen (3S)</strong> in order to activate and implement the necessary changes arising from the knowledge gained from the training:
+                            </p>
+                            <p>
+                            c)     <strong>A Personal Action Plan</strong> – which outlines:
+                                    <span className="list">
+                                    <ul>
+                                      <li><p>The Major Actions to be taken;</p></li>
+                                      <li><p>Resources required for taking such actions;</p></li>
+                                      <li><p>Specific help/assistance required from any person or entity;</p></li>
+                                      <li><p>Timelines for accomplishing such action.</p></li>
+                                    </ul>
+                                    </span>
+                            </p>
                             <a
                               style={{borderRadius:"20px", color:"white"}}
                               role="button"
-                              href="#contact-us2"
-                              className="btn button hvr-shutter-out-horizontal scroll"
+                              href="/training-offerings"
+                              className="btn button hvr-shutter-out-horizontal"
                             >
-                              Get In Touch
+                              See All Training offerings
                             </a>
                           </div>
                         </div>
@@ -699,13 +718,13 @@ function LandingPage(){
                       <div className="row">
                         <div className="col-md-6">
                           <img
-                            src={leader2}
+                            src={face1}
                             width={542}
-                            height={470}
-                            style={{objectFit:"cover"}}
+                            style={{objectFit:"cover", height:"100%"}}
                             alt="pineapple"
                             className="element-center"
                           />
+                          <div className="overlay"></div>
                         </div>
                         <div className="col-md-6">
                           <div className="tabs-bg">
@@ -726,85 +745,7 @@ function LandingPage(){
                               className="btn button hvr-shutter-out-horizontal scroll"
                               style={{borderRadius:"20px", color:"white"}}
                             >
-                              Get In Touch
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="tab-3">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <img
-                            src={productive}
-                            width={542}
-                            height={470}
-                            style={{objectFit:"cover"}}
-                            alt="pineapple"
-                            className="element-center"
-                          />
-                        </div>
-                        <div className="col-md-6">
-                          <div className="tabs-bg">
-                            <h3>General Capacity & Productivity Enhancement Training</h3>
-                            <div className="list">
-                              <ul>
-                                <li><p> Maximizing Value for the HR Function</p></li>
-                                <li><p>Train the Trainer Course for Training Facilitators</p></li>
-                                <li><p>Becoming a High-Performing Employee</p></li>
-                                <li><p>Office, Administrative and ICT skills for Receptionists, Secretaries and Personal Assistants </p></li>
-                                <li><p>Problem solving Skills for Managers and Supervisors</p></li>
-                                <li><p>Essential work Attitudes Training</p></li>
-                                <li><p>How to Successfully Manage Change Projects </p></li>
-                              </ul>
-                            </div>
-                            <a
-                              role="button"
-                              href="#contact-us2"
-                              className="btn button hvr-shutter-out-horizontal scroll"
-                              style={{borderRadius:"20px", color:"white"}}
-                            >
-                              Get In Touch
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="tab-4">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <img
-                            src={senior}
-                            width={542}
-                            height={470}
-                            style={{objectFit:"cover"}}
-                            alt="pineapple"
-                            className="element-center"
-                          />
-                        </div>
-                        <div className="col-md-6">
-                          <div className="tabs-bg">
-                            {/* <h2>04</h2> */}
-                            <h3>
-                            Senior-Level Public Leadership Program 
-                            </h3>
-                            <p>
-                              Do you aim at targeting larger audiences from Kokrokoo's
-                              TV Stations partners?  Our software
-                              which hosts numerous TV stations allows you to transfer ads
-                              for advertisement.
-                            </p>
-                            <a
-                              role="button"
-                              href="#contact-us2"
-                              className="btn button hvr-shutter-out-horizontal scroll"
-                              style={{borderRadius:"20px", color:"white"}}
-                            >
-                              Get In Touch
+                              See All Tranings
                             </a>
                           </div>
                         </div>
@@ -868,8 +809,11 @@ function LandingPage(){
                     {courses.map((value, key)=>(
                     <Col md="4">
                     <Card className="main_card" style={{overflow:"hidden"}}>
-                    <CardImg top width="100%" src={about} alt="Card image cap" className="card_image"/>
-                    <a style={{textDecoration:"none"}} className="next" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
+                    <div className="cover">
+                      <CardImg top width="100%" src={about} alt="Card image cap" className="card_image" style={{position:"relative"}}/>
+                  
+                      <a style={{textDecoration:"none", color:"white"}} className="next" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
+                    </div>
                     <CardBody>
                       <CardTitle tag="h5">Course Title</CardTitle>
                       <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>

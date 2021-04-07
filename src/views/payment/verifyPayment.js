@@ -24,7 +24,7 @@ import {
                         <CardTitle tag="h5">Payment is being processed</CardTitle>
                         <CardText>Please check your email to verify payment</CardText>
                         <Link to="/user/transactions">
-                        <Button color="primary" block>Go to Dashboard</Button>
+                            <Button color="primary" block>Go to Dashboard</Button>
                         </Link>
                     </Card>
                     </Col>

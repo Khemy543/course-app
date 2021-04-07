@@ -19,6 +19,9 @@ import { Provider } from 'react-redux';
 import { getuserData } from "actions/userActions";
 import CourseDetails from "views/examples/CourseDetails";
 import Payment from "layouts/Payment";
+import Training from "views/examples/Training";
+import SeniorLevel from "views/examples/SeniorLevelProgram";
+import SrollToTop from "react-router-scroll-top";
 
 
 const store =  configureStore();
@@ -32,12 +35,15 @@ if(localStorage.getItem('AuthToken')){
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
+    <SrollToTop />
         <Switch>
         <Route path="/user" render={(props) => <AdminLayout {...props} />} />
         <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
         <AuthRedirection exact path="/" component={LandingPage} />
         <Route path="/payment" render={(props) => <Payment {...props} />} />
         <AuthRedirection exact path="/course/:id/details" component={CourseDetails} />
+        <AuthRedirection exact path="/training-offerings" component={Training} />
+        <AuthRedirection exact path="/senior-level-public-leadership" component={SeniorLevel} />
         </Switch>
     </BrowserRouter>
     </Provider>,
