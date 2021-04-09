@@ -28,7 +28,7 @@ import client4 from '../assets/img/brand/client4.jpeg';
 import client5 from '../assets/img/brand/client5.jpeg';
 import client6 from '../assets/img/brand/client6.jpeg';
 import client7 from '../assets/img/brand/client7.jpeg';
-import client8 from '../assets/img/brand/client8.jpeg';
+import client8 from '../assets/img/brand/client8.jpg';
 import client9 from '../assets/img/brand/client9.jpeg';
 import client10 from '../assets/img/brand/client10.jpeg';
 import client11 from '../assets/img/brand/client11.jpeg';
@@ -44,17 +44,13 @@ import client20 from '../assets/img/brand/client20.jpeg';
 import client21 from '../assets/img/brand/client21.jpeg';
 import client22 from '../assets/img/brand/client22.jpeg';
 import client23 from '../assets/img/brand/client23.jpeg';
-import logo from '../assets/img/brand/logo.png';
+import society from 'assets/img/brand/society.png';
 import slider1 from '../assets/img/brand/s-1.jpg';
 import slider2 from '../assets/img/brand/s-3.jpg';
 import slider3 from '../assets/img/brand/s-4.jpg';
 import about from 'assets/img/brand/aboutus.jpeg';
-import manager from 'assets/img/brand/manager.jpeg';
-import leader from 'assets/img/brand/leader.jpeg';
-import leader2 from 'assets/img/brand/leader2.jpeg';
-import productive from 'assets/img/brand/productive.jpeg';
-import senior from 'assets/img/brand/senior.jpeg';
-import logo1 from 'assets/img/brand/logo-1.jpg';
+import nedco from 'assets/img/brand/nedco.png';
+import gra from 'assets/img/brand/gra.png'
 import face2 from 'assets/img/brand/face2.jpg';
 import face3 from 'assets/img/brand/face3.jpg';
 import face1 from 'assets/img/brand/face1.jpg';
@@ -62,7 +58,6 @@ import face1 from 'assets/img/brand/face1.jpg';
 import Slider from "react-slick"; 
 
 var settings = {
-  dots: true,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -77,6 +72,24 @@ var settings = {
         }
       }
     ]
+};
+
+var clientSettings = {
+  infinite: true,
+  speed: 4000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay:true,
+  dots:false,
+  responsive:[
+    {
+      breakpoint:450,
+      settings:{
+          centerMode:true,
+          slidesToShow:1
+      }
+    }
+  ]
 };
 
 function LandingPage(){
@@ -208,6 +221,32 @@ function LandingPage(){
     }
   ]
 
+  const clients=[
+    {
+      id:1,
+      logo:gra,
+      title:"Change Management Coordinator, Ghana Revenue Authority",
+      text:"We’re very impressed with how GSR consulting provided quality and tailor-made training services on project management to some of our key staff who are engaged on different projects. Their ability to make the training very practical is commendable”."
+    },
+    {
+      id:2,
+      logo:nedco,
+      title:"Performance Management and HR Services, NEDCo",
+      text:"“GSR Consulting’s training has dismantled certain assumptions I had about people management. I recommend their services to managers at all levels and people who aspire to be in any management position”. "
+    },
+    {
+      id:3,
+      logo:society,
+      title:" Head of Human Resource, Societe General Ghana",
+      text:"“GSR Consulting has well-seasoned and expert resource persons who are able to relate theory to practice. The organization is always focused on delivering high-impact interventions that impact the bottom line. They are reliable” "
+    },
+    {
+      id:4,
+      logo:client12,
+      title:"Health and Safety Unit, VRA – Accra",
+      text:"“GSR Consulting facilitated a training Workplace Relations and Occupational Health for some of our Staff. This program has helped to establish stronger ties among our staff and improved the services we offer to our clients. Good work and well done GSR”. "
+    }
+  ]
 
 
   React.useEffect(() => {
@@ -704,7 +743,7 @@ function LandingPage(){
                               style={{borderRadius:"20px", color:"white"}}
                               role="button"
                               href="/training-offerings"
-                              className="btn button hvr-shutter-out-horizontal"
+                              className="btn button"
                             >
                               See All Training offerings
                             </a>
@@ -827,6 +866,38 @@ function LandingPage(){
                   </Row>
                 </div>
               </div>
+
+              
+              <div id="portfolio3" className="mid-level-padding">
+                <div className="container">
+                  <h4 className="head-subtitle">our clients</h4>
+                      <h2 className="big-text" style={{marginLeft:"0px"}}>
+                      What Our <strong>Clients </strong>Say About Us  
+                    </h2>
+                    <hr/>
+                  <Row>
+                    <Col md="12" className="mr-auto ml-auto">
+                    <Slider {...clientSettings} infinite={clients.length>3}>
+                      {clients.map((value, key)=>(
+                        <Col>
+                          <Card style={{ border:"1px solid #f8f9fa", width:"auto"}}>
+                            <img alt="#" src={value.logo} style={{borderRadius:"100%", width:"70px", height:"70px",
+                              marginTop:"10px", marginLeft:"15px", objectFit:"cover"}}/>
+                            <CardBody>
+                              <CardTitle style={{fontWeight:"bold",height:"30px"}}>{value.title}</CardTitle>
+                              <p style={{ marginTop:"40px"}}>
+                                {value.text}
+                              </p>
+                            </CardBody>
+                          </Card>
+                          </Col>
+                      ))}
+                    </Slider>
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+
               {/*contact-us-1 end*/}
               {/* contact-us2 start */}
               <div id="contact-us" className="mid-level-padding">
