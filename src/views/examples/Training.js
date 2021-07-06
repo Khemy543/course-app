@@ -179,7 +179,8 @@ export default function Training(){
                     <div className="cover">
                         <CardImg top width="100%" src={about} alt="Card image cap" className="card_image" style={{position:"relative"}}/>
                         
-                        <a style={{textDecoration:"none", color:"white"}} className="next" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
+                        <a style={{borderRadius:"10px", color:"white",backgroundColor:"#17d0cf"}}
+                        role="button" className="next btn button" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
                     </div>
                     <CardBody>
                         <CardTitle tag="h5">{value.title}</CardTitle>

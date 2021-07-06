@@ -52,6 +52,7 @@ import about from 'assets/img/brand/aboutus.jpeg';
 import nedco from 'assets/img/brand/nedco.png';
 import gra from 'assets/img/brand/gra.png'
 import face2 from 'assets/img/brand/face2.jpg';
+import face4 from 'assets/img/brand/face4.jpg';
 import face3 from 'assets/img/brand/face3.jpg';
 import face1 from 'assets/img/brand/face1.jpg';
 //components
@@ -698,7 +699,7 @@ function LandingPage(){
                       <div className="row">
                         <div className="col-md-6" style={{padding:0}}>
                           <img
-                            src={face2}
+                            src={face4}
                             width={542}
                             alt="pineapple"
                             className="element-center"
@@ -779,10 +780,10 @@ function LandingPage(){
                               </ul>
                             </div>
                             <a
-                              role="button"
-                              href="#contact-us2"
-                              className="btn button hvr-shutter-out-horizontal scroll"
                               style={{borderRadius:"20px", color:"white"}}
+                              role="button"
+                              href="/training-offerings"
+                              className="btn button"
                             >
                               See All Tranings
                             </a>
@@ -847,8 +848,8 @@ function LandingPage(){
                   <Row>
                     {courses.map((value, key)=>(
                     <Col md="4">
-                    <Card className="main_card" style={{overflow:"hidden", cursor:"pointer"}}>
-                    <div className="cover" style={{ overflow:'hidden', backgroundColor:"black"}}>
+                    <Card className="main_card">
+                    <div className="cover">
                       <CardImg top width="100%" src={about} alt="Card image cap" className="card_image" style={{position:"relative" }}/>
                   
                       <a style={{borderRadius:"10px", color:"white",backgroundColor:"#17d0cf"}}

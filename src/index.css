@@ -361,6 +361,17 @@
   padding:0px;
   cursor: pointer;
 }
+
+.cover {
+  overflow: hidden;
+  background-color: black;
+}
+
+.main_card {
+  overflow:"hidden";
+  cursor: pointer;
+}
+
 .main_card:hover .next{
   display: block;
 }
