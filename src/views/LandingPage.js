@@ -45,9 +45,9 @@ import client21 from '../assets/img/brand/client21.jpeg';
 import client22 from '../assets/img/brand/client22.jpeg';
 import client23 from '../assets/img/brand/client23.jpeg';
 import society from 'assets/img/brand/society.png';
-import slider1 from '../assets/img/brand/s-1.jpg';
-import slider2 from '../assets/img/brand/s-3.jpg';
-import slider3 from '../assets/img/brand/s-4.jpg';
+import slider1 from '../assets/img/brand/slider4.jpg';
+import slider2 from '../assets/img/brand/slider2.jpeg';
+import slider3 from '../assets/img/brand/slider5.jpg';
 import about from 'assets/img/brand/aboutus.jpeg';
 import nedco from 'assets/img/brand/nedco.png';
 import gra from 'assets/img/brand/gra.png'
@@ -377,14 +377,14 @@ function LandingPage(){
                         data-transition="slideup"
                         data-title="01"
                         data-delay="5000"
+                        style={{backgroundColor:"black", width:"100%", height:"100%"}}
                       >
                         {/* MAIN IMAGE */}
-                        <img
-                          src={slider1}
-                          alt="cover"
-                          style={{width:"auto", height:"120px"}}
-                          className="image-filter"
-                        />
+                          <img
+                            src={slider1}
+                            alt="cover"
+                            style={{width:"100%", height:"100%", opacity:"0.4", objectFit:"cover"}}
+                          />
                         {/* LAYER NR. 1 */}
                         <h1
                          className="tp-caption News-Title text-center"
@@ -442,13 +442,14 @@ function LandingPage(){
                         data-transition="slideup"
                         data-title="02"
                         data-delay="5000"
+                        style={{backgroundColor:"black", width:"100%", height:"100%"}}
                       >
                         {/* MAIN IMAGE */}
-                        <img
-                          src={slider2}
-                          alt="cover"
-                          style={{height:1280, width:1920}}
-                        />
+                          <img
+                            src={slider2}
+                            alt="cover"
+                            style={{width:"100%", height:"100%", opacity:"0.4", objectFit:"cover"}}
+                          />
                         {/* LAYER NR. 1 */}
                         <h1
                             className="tp-caption News-Title text-center"
@@ -506,13 +507,14 @@ function LandingPage(){
                         data-transition="slideup"
                         data-title="03"
                         data-delay="5000"
+                        style={{backgroundColor:"black", width:"100%", height:"100%"}}
                       >
                         {/* MAIN IMAGE */}
-                        <img
-                          src={slider3}
-                          alt="cover"
-                          style={{height:1280, width:1920}}
-                        />
+                          <img
+                            src={slider3}
+                            alt="cover"
+                            style={{width:"100%", height:"100%", opacity:"0.4", objectFit:"cover"}}
+                          />
                         {/* LAYER NR. 1 */}
                         <h1
                           className="tp-caption News-Title text-center"
@@ -582,7 +584,7 @@ function LandingPage(){
                     <div className="col-md-6">
                         <div className="left-section">
                           <img
-                            src={face3}
+                            src={face1}
                             width={542}
                             height={470}
                             style={{objectFit:"cover"}}

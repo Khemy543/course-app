@@ -16,16 +16,17 @@ import {
   Row
  
 } from "reactstrap";
-import AOS from 'aos';
 import AuthFooter from 'components/Footers/AuthFooter.js'
-import 'aos/dist/aos.css';
 import about from 'assets/img/brand/aboutus.jpeg';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import data from '../../data.js';
 
-export default function CourseDetails(){
+
+export default function CourseDetails(props){
     const [navbarColor, setNavbarColor] = React.useState('info');
     const [color, setColor] = React.useState('white');
     const [collapseOpen, setCollapseOpen] = React.useState(false);
+    const [course, setCourse] = React.useState({})
 
     const handleAppClick=()=>{
       if(collapseOpen === true){
@@ -33,6 +34,13 @@ export default function CourseDetails(){
         setCollapseOpen(false)
       }
     }
+
+    React.useEffect(() => {
+      console.log(props.match.params.id, data)
+      const tempCourse = data.find(item => item.id ===  Number(props.match.params.id));
+      setCourse(tempCourse);
+      console.log(tempCourse)
+    },[])
 
     return(
         <div>
@@ -122,7 +130,7 @@ export default function CourseDetails(){
           <Row>
             <Col>
             <div>
-              <h1>Senior-Level Public Leadership Program </h1>
+              <h1>{course.title} </h1>
               <p>
               Every government has good intentions to deliver public services at a level and quality expected by the electorate. However, in the context of limited resources amidst unending social needs, and worrying levels of inefficiency, and a public sector staffed with employees with lackadaisical attitudes towards work, realising such objective has remained a mirage for most governments. At the core of realising government’s electioneering manifesto are public sector senior managers (directors) who are involved in designing and implementing strategies and making crucial decisions on resource allocation. To the extent that such leaders exercise effective leadership, display excellence-orientation (commitment to working tirelessly to attain the highest level of quality), and identify and confront inhibiting habits and attitudes, and pursue the tenets of public service ethics and values, such objective can be fulfilled. 
 
@@ -157,7 +165,7 @@ export default function CourseDetails(){
               <CardImg top width="100%" src={about} alt="Card image cap" />
               <CardBody>
                 <h1 style={{fontWeight:700}}>GHS 20.00</h1>
-                <CardTitle tag="h5">Course Title</CardTitle>
+                <CardTitle tag="h5">{course.title}</CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
                 <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                 <Link to="/payment/user-information">

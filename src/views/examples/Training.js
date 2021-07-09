@@ -16,61 +16,35 @@ import {
   Row
  
 } from "reactstrap";
-import AOS from 'aos';
 import AuthFooter from 'components/Footers/AuthFooter.js'
-import 'aos/dist/aos.css';
 import about from 'assets/img/brand/aboutus.jpeg';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import data from '../../data.js'
 
 export default function Training(){
     const [navbarColor, setNavbarColor] = React.useState('info');
     const [color, setColor] = React.useState('white');
     const [collapseOpen, setCollapseOpen] = React.useState(false);
-
+    const [successProneManager, setSuccessProneManage] = React.useState([]);
+    const [turbulenceProofLeader, setTurbulenceProofLeader]  = React.useState([])
+    const [GeneralCapacityProductivityEnhancementTraining, setGeneralCapacityProductivityEnhancementTraining] = React.useState([])
+    
     const handleAppClick=()=>{
       if(collapseOpen === true){
         document.documentElement.classList.toggle("nav-open");
         setCollapseOpen(false)
       }
     }
-    const courses = [
-        {
-          id:1,
-          title:"Entry Level Mastery (Team Leaders and New Managers) ",
-          aim:"To draw attention to essential leadership skills required of directors of MDAs in evolving a professional public sector organisation that delivers excellence to its stakeholders;",
-          duration:"3"
-        },
-        {
-          id:2,
-          title:"Intermediate Level Mastery (Middle Managers) ",
-          aim:"To emphasize the core skills and mindset required for succeeding as professionals and technocrats in an environment heavily dominated and influenced by politicians;",
-          duration:"2"
-        },
-        {
-          id:3,
-          title:"Advanced Level Mastery (Senior Managers)",
-          aim:"",
-          duration:""
-        },
-        {
-          id:4,
-          title:"Director Level Mastery (HODs, Directors & Deputy Directors)",
-          aim:"",
-          duration:""
-        },
-        {
-          id:5,
-          title:"Management/CEO Level Mastery (CEOs, MDs, GMs, DGs & Chief Directors) ",
-          aim:"",
-          duration:""
-        },
-        {
-          id:6,
-          title:"Board Level Mastery (Board Members)",
-          aim:"",
-          duration:""
-        }
-      ]
+
+    React.useEffect(()=> {
+      const success_prone_manager = data.filter(item => item.main === 'The Success-Prone Manager')
+      const turbulence_proof_leader = data.filter(item => item.main === 'The Turbulence-Proof Leader')
+      const enhancement_training = data.filter(item => item.main === 'General Capacity & Productivity Enhancement Training')
+      
+      setSuccessProneManage(success_prone_manager);
+      setTurbulenceProofLeader(turbulence_proof_leader);
+      setGeneralCapacityProductivityEnhancementTraining(enhancement_training)
+    },[])
     
     return(
         <div>
@@ -173,7 +147,7 @@ export default function Training(){
             <Row>
             <Col md="11" className="ml-auto mr-auto">
                 <Row>
-                {courses.map((value, key)=>(
+                {successProneManager.map((value, key)=>(
                     <Col md="4">
                     <Card className="main_card" style={{overflow:"hidden", marginBottom:"20px"}}>
                     <div className="cover">
@@ -203,7 +177,7 @@ export default function Training(){
                 <Row>
             <Col md="11" className="ml-auto mr-auto">
                 <Row>
-                {courses.map((value, key)=>(
+                {turbulenceProofLeader.map((value, key)=>(
                     <Col md="4">
                     <Card className="main_card" style={{overflow:"hidden", marginBottom:"20px"}}>
                     <div className="cover">
@@ -232,7 +206,7 @@ export default function Training(){
                 <Row>
             <Col md="11" className="ml-auto mr-auto">
                 <Row>
-                {courses.map((value, key)=>(
+                {GeneralCapacityProductivityEnhancementTraining.map((value, key)=>(
                     <Col md="4">
                     <Card className="main_card" style={{overflow:"hidden", marginBottom:"20px"}}>
                     <div className="cover">

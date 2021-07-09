@@ -21,11 +21,13 @@ import AuthFooter from 'components/Footers/AuthFooter.js'
 import 'aos/dist/aos.css';
 import about from 'assets/img/brand/aboutus.jpeg';
 import { Link } from 'react-router-dom'
+import data from '../../data.js';
 
 export default function SeniorLevel(){
     const [navbarColor, setNavbarColor] = React.useState('info');
     const [color, setColor] = React.useState('white');
     const [collapseOpen, setCollapseOpen] = React.useState(false);
+    const [courses, setCourses] = React.useState([])
 
     const handleAppClick=()=>{
       if(collapseOpen === true){
@@ -34,26 +36,10 @@ export default function SeniorLevel(){
       }
     }
 
-    const courses = [
-        {
-          id:1,
-          title:"Modules 1",
-          aim:"Director Leadership Effectiveness in the Public Sector",
-          duration:"3"
-        },
-        {
-          id:2,
-          title:"Modules 2",
-          aim:"Directing Effectively in an Environment of Political Influence",
-          duration:"2"
-        },
-        {
-          id:3,
-          title:"Module 3",
-          aim:"Exploiting the Benefits of New Public Management",
-          duration:"2"
-        }
-      ]
+    React.useEffect(() => {
+      const tempCourses = data.filter(item => item.main === 'Senior-Level Public Leadership Program');
+      setCourses(tempCourses)
+    },[])
 
     return(
         <div>
@@ -166,11 +152,14 @@ export default function SeniorLevel(){
             <Row>
             {courses.map((value, key)=>(
             <Col md="4 mt-5">
-            <Card className="main_card" style={{overflow:"hidden"}}>
+            <Card className="main_card">
             <div className="cover">
                 <CardImg top width="100%" src={about} alt="Card image cap" className="card_image" style={{position:"relative"}}/>
                 
-                <a style={{textDecoration:"none", color:"white"}} className="next" href={`/course/${value.id}/details`}>View details <i className="fa fa-chevron-right"></i></a>
+                <a style={{borderRadius:"10px", color:"white",backgroundColor:"#17d0cf"}}
+                        role="button" className="next btn button" href={`/course/${value.id}/details`}>
+                        View details <i className="fa fa-chevron-right"></i>
+                      </a>
             </div>
             <CardBody>
                 <CardTitle tag="h5">{value.title}</CardTitle>
