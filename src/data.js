@@ -169,6 +169,37 @@ const data = [
         aim: "To introduce the basic tenents of new public management (NPM) to directors of MDAs as a way of driving efficiency and cost containment in the public sector",
         duration: 2
     },
+    {
+        main:"Consultancy",
+        sector:"Public",
+        title:"Exclusively Public Sector Chief Executives (EPSCE)",
+        id:25
+    },
+    {
+        main:"Consultancy",
+        sector:"Public",
+        title:"Public Sector Support International",
+        id:26
+    },
+    {
+        main:"Consultancy",
+        sector:"Public",
+        title:"Public Service Excellence Program",
+        id:27
+    },
+    {
+        main:"Consultancy",
+        sector:"Private",
+        title:"HR Transformations",
+        id:28
+    },
+    {
+        main:"Consultancy",
+        sector:"Private",
+        title:"HR Outsourcing Modules",
+        id:29
+    },
+
 ]
 
 export default data;

@@ -770,24 +770,39 @@ function LandingPage(){
                         </div>
                         <div className="col-md-6">
                           <div className="tabs-bg">
-                            <h3>The Turbulence-Proof Leader (Leadership Development Training)</h3>
+                            <h3>We have three consultancy products that have been designed exclusively for public sector organisation, and
+                              two others for private sectors organisation, but which public sector organisations would also find useful.
+                            </h3>
+                            <br/>
+                            <h3>Public Sector</h3>
                             <div className="list">
                               <ul>
-                                <li><p>Entry Level Mastery (Team Leaders and New Managers)</p></li>
-                                <li><p>Intermediate Level Mastery (Middle Managers)</p></li>
-                                <li><p>Advanced Level Mastery (Senior Managers)</p></li>
-                                <li><p>Director Level Mastery (HODs, Directors & Deputy Directors)</p></li>
-                                <li><p>Management/CEO Level Mastery (CEOs, MDs, GMs, DGs & Chief Directors)</p></li>
-                                <li><p>Board Level Mastery (Board Members)</p></li>
+                                <li><p>Exclusively Public Sector Chief Executives (EPSCE)<br/>
+                                  (Support Public Sector Leaders to Achieve Extraordinary Results)
+                                </p></li>
+                                <li><p>Public Sector Support International (Retooling Government for Results) 
+                                  Cost-Saving Strategies for Government and Public Sectors.
+                                  </p></li>
+                                <li><p>Public Service Excellence Program</p></li>
                               </ul>
                             </div>
+                            
+                           <h3>Private Sectors</h3>
+
+                           <div className="list">
+                              <ul>
+                                <li><p>HR Transformations</p></li>
+                                <li><p>HR Outsourcing Modules</p></li>
+                              </ul>
+                            </div>
+
                             <a
                               style={{borderRadius:"20px", color:"white"}}
                               role="button"
-                              href="/training-offerings"
+                              href="/consultancy"
                               className="btn button"
                             >
-                              See All Tranings
+                              See All Services
                             </a>
                           </div>
                         </div>
