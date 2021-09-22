@@ -20,13 +20,15 @@ import AuthFooter from 'components/Footers/AuthFooter.js'
 import about from 'assets/img/brand/aboutus.jpeg';
 import { Link } from 'react-router-dom';
 import data from '../../data.js';
+import logo from "../../assets/img/logo.jpeg";
 
 
 export default function CourseDetails(props){
     const [navbarColor, setNavbarColor] = React.useState('info');
     const [color, setColor] = React.useState('white');
     const [collapseOpen, setCollapseOpen] = React.useState(false);
-    const [course, setCourse] = React.useState({})
+    const [course, setCourse] = React.useState({});
+    const [title, setTitle] = React.useState('')
 
     const handleAppClick=()=>{
       if(collapseOpen === true){
@@ -36,10 +38,17 @@ export default function CourseDetails(props){
     }
 
     React.useEffect(() => {
-      console.log(props.match.params.id, data)
-      const tempCourse = data.find(item => item.id ===  Number(props.match.params.id));
-      setCourse(tempCourse);
-      console.log(tempCourse)
+      const { title, id, type } = props.match.params;
+      const { training, consultancy } = data;
+
+      setTitle(title)
+
+      if(type === 'training'){
+        const { courses } = training;
+        const selctedCourse = courses.find(item => item.id === Number(id));
+
+        setCourse(selctedCourse);
+      }
     },[])
 
     return(
@@ -51,16 +60,33 @@ export default function CourseDetails(props){
         <Navbar className={"fixed-top " + navbarColor} expand="lg" style={{marginTop:0}}>
         <Container>
         <div className="navbar-translate">
-          <NavbarBrand
-          data-placement="bottom"
-          >
-          <a href="/">
-          <h3 style={{fontWeight:300, textDecoration:"none", textTransform:"capitalize", fontSize:"30px", color:"black"}}>
-          {/* <img alt="Course App" src={logo1} style={{height:"55px", width:"auto"}}/> */} <span style={{fontWeight:700}}>GSR</span> Consulting
-          
-          </h3>
-          </a>
-          </NavbarBrand>
+        <NavbarBrand data-placement="bottom">
+                <a href="/">
+                  <div className="d-flex">
+                    <img
+                      alt="Course App"
+                      src={logo}
+                      style={{
+                        height: "40px",
+                        width: "auto",
+                        borderRadius: "4px",
+                        marginRight: "5px",
+                      }}
+                    />
+
+                    <h3
+                      style={{
+                        fontWeight: 600,
+                        textDecoration: "none",
+                        textTransform: "capitalize",
+                        fontSize: "22px",
+                      }}
+                    >
+                      GSR CONSULTING
+                    </h3>
+                  </div>
+                </a>
+              </NavbarBrand>
           
         </div>
         <div
@@ -80,34 +106,9 @@ export default function CourseDetails(props){
           navbar
         >
           <Nav navbar>
-            <NavItem className="active">
-              <NavLink href="#Home"
-              className="scroll mr-3"
-              >
-                HOME
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink  href="#about-us"
-              className="scroll mr-3"
-              >
-                ABOUT
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink  href="#services"
-              className="scroll mr-3"
-              >
-                SERVICES
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink  href="#contact-us"
-              className="scroll mr-3"
-              >
-                CONTACT US
+             <NavItem className="active">
+              <NavLink tag="a" href="/" className="mr-3">
+                  HOME
               </NavLink>
             </NavItem>
             <NavItem>
@@ -130,54 +131,76 @@ export default function CourseDetails(props){
           <Row>
             <Col>
             <div>
-              <h1>{course.title} </h1>
-              <p>
+                <h2 className="big-text" style={{marginLeft:0, color:"black"}}>
+                    <strong>{title}</strong>
+                </h2>
+                <p>{course.introduction}</p>
+                
+              {/* <h1>{course.name} </h1> */}
+              {/* <p>
               Every government has good intentions to deliver public services at a level and quality expected by the electorate. However, in the context of limited resources amidst unending social needs, and worrying levels of inefficiency, and a public sector staffed with employees with lackadaisical attitudes towards work, realising such objective has remained a mirage for most governments. At the core of realising government’s electioneering manifesto are public sector senior managers (directors) who are involved in designing and implementing strategies and making crucial decisions on resource allocation. To the extent that such leaders exercise effective leadership, display excellence-orientation (commitment to working tirelessly to attain the highest level of quality), and identify and confront inhibiting habits and attitudes, and pursue the tenets of public service ethics and values, such objective can be fulfilled. 
 
-              </p>
-              <p>4.6 <i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/>
+              </p> */}
+              {/* <p>4.6 <i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/><i className="fa fa-star"/>
                 (3555 ratings)
-              </p>
-              <p>Last Updated 3/12/21 <i className="fa fa-globe"/> English</p>
-              <Button outline color="primary">WhisList</Button> <Button outline color="primary">Share <i className="fa fa-share-alt ml-1"/></Button> <Button outline color="primary">Like<i className="fa fa-heart ml-2"/></Button>
+              </p> */}
+              {/* <p>Last Updated 3/12/21 <i className="fa fa-globe"/> English</p>
+              <Button outline color="primary">WhisList</Button> <Button outline color="primary">Share <i className="fa fa-share-alt ml-1"/></Button> <Button outline color="primary">Like<i className="fa fa-heart ml-2"/></Button> */}
             </div>
               <br/>
             <div style={{backgroundColor:"#EEEEEE", padding:"15px"}}>
-              <h1>What you'll learn</h1>
-              <h4><i className="fa fa-check mr-2" />Module 1</h4>
-              <p>Director Leadership Effectiveness in the Public Sector</p>
-              <p><strong>Aim :</strong>To draw attention to essential leadership skills required of directors of MDAs in evolving a professional public sector organisation that delivers excellence to its stakeholders;</p>
-              <small>Duration: 3 days</small>
+
+                {course.objectives?
+                <div>
+                  <h1>Objectives</h1>
+                  {course.objectives && course.objectives.map((value, key) => (
+                  <p><i className="fa fa-check mr-2"/>{value.name}</p>
+                  ))}
+                </div>
+                :
+                null}
+              <h1>Modules</h1>
+              
               <br/>
-              <h4><i className="fa fa-check mr-2" />Module 2</h4>
-              <p>Directing Effectively in an Environment of Political Influence</p>
-              <p><strong>Aim :</strong>To emphasize the core skills and mindset required for succeeding as professionals and technocrats in an environment heavily dominated and influenced by politicians;</p>
-              <small>Duration: 2 days</small>
-              <br/>
-              <h4><i className="fa fa-check mr-2" />Module 3</h4>
-              <p>Exploiting the Benefits of New Public Management</p>
-              <p><strong>Aim :</strong>To introduce the basic tenets of new public management (NPM) to directors of MDAs as a way of driving efficiency and cost containment in the public sector.</p>
-              <small>Duration: 3 days</small>
+              {course.modules && course.modules.map((value, key) => (
+                <div key={value.id} className="mb-4">
+                <h3>{value.name}</h3>
+                {value.aim ?
+                <div>
+                  <p><strong>Aim :</strong></p>
+                  <p className="mt--2">{value.aim}</p>
+                </div>
+                :null}
+                {value.objectives?
+                <div>
+                  <p><strong>Objectives</strong></p>
+                  {value.objectives && value.objectives.map((obj, index)=>(
+                  <p><i className="fa fa-check mr-2"/>{obj.message}</p>
+                  ))}
+                </div>  
+                :null}
+                
+                </div>
+              ))}
             </div>
              </Col>
             <Col md="4">
             <Card>
               <CardImg top width="100%" src={about} alt="Card image cap" />
               <CardBody>
-                <h1 style={{fontWeight:700}}>GHS 20.00</h1>
+                <h1 style={{fontWeight:700}}>{course.name}</h1>
                 <CardTitle tag="h5">{course.title}</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
                 <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                 <Link to="/payment/user-information">
                 <Button color="primary" block >REGISTER</Button>
                 </Link>
-                <br/>
+                {/* <br/>
                 <div>
                   <h3>This course includes</h3>
                   <small><i className="fa fa-camera mr-2"/> 22 hours on-demand video</small><br/>
                   <small><i className="fa fa-file mr-2"/> 14 articles</small><br/>
                   <small><i className="fa fa-certificate mr-2"/> Certificate of completion</small><br/>
-                </div>
+                </div> */}
               </CardBody>
             </Card>
             </Col>

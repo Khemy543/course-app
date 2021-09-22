@@ -42,7 +42,7 @@ ReactDOM.render(
         <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
         <AuthRedirection exact path="/" component={LandingPage} />
         <Route path="/payment" render={(props) => <Payment {...props} />} />
-        <AuthRedirection exact path="/course/:id/details" component={CourseDetails} />
+        <AuthRedirection exact path="/course/:title/:id/:type/details" component={CourseDetails} />
         <AuthRedirection exact path="/training-offerings" component={Training} />
         <AuthRedirection exact path="/senior-level-public-leadership" component={SeniorLevel} />
         <AuthRedirection exact path="/consultancy" component={Consultancy} />

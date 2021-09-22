@@ -7,19 +7,18 @@ import {
   NavLink,
   Nav,
   Container,
-  Button,
   Card,
   CardBody,
   CardImg,
-  CardText,CardTitle,CardSubtitle,
+  CardText,CardTitle,
   Col,
   Row
  
 } from "reactstrap";
 import AuthFooter from 'components/Footers/AuthFooter.js'
 import about from 'assets/img/brand/aboutus.jpeg';
-import { Link } from 'react-router-dom';
 import data from '../../data.js';
+import logo from "../../assets/img/logo.jpeg";
 
 
 export default function Consultancy(props){
@@ -37,10 +36,11 @@ export default function Consultancy(props){
     }
 
     React.useEffect(() => {
-      const tempCourse = data.filter(item => item.main == 'Consultancy' && item.sector == 'Public');
+      const { consultancy } = data;
+      const tempCourse = consultancy.private;
       setPublic(tempCourse);
 
-      const temp = data.filter(item => item.main == 'Consultancy' && item.sector == 'Private');
+      const temp = consultancy.public
       setPrivate(temp)
     },[])
 
@@ -53,16 +53,33 @@ export default function Consultancy(props){
         <Navbar className={"fixed-top " + navbarColor} expand="lg" style={{marginTop:0}}>
         <Container>
         <div className="navbar-translate">
-          <NavbarBrand
-          data-placement="bottom"
-          >
-          <a href="/">
-          <h3 style={{fontWeight:300, textDecoration:"none", textTransform:"capitalize", fontSize:"30px", color:"black"}}>
-          {/* <img alt="Course App" src={logo1} style={{height:"55px", width:"auto"}}/> */} <span style={{fontWeight:700}}>GSR</span> Consulting
-          
-          </h3>
-          </a>
-          </NavbarBrand>
+        <NavbarBrand data-placement="bottom">
+                <a href="/">
+                  <div className="d-flex">
+                    <img
+                      alt="Course App"
+                      src={logo}
+                      style={{
+                        height: "40px",
+                        width: "auto",
+                        borderRadius: "4px",
+                        marginRight: "5px",
+                      }}
+                    />
+
+                    <h3
+                      style={{
+                        fontWeight: 600,
+                        textDecoration: "none",
+                        textTransform: "capitalize",
+                        fontSize: "22px",
+                      }}
+                    >
+                      GSR CONSULTING
+                    </h3>
+                  </div>
+                </a>
+              </NavbarBrand>
           
         </div>
         <div
@@ -82,34 +99,9 @@ export default function Consultancy(props){
           navbar
         >
           <Nav navbar>
-            <NavItem className="active">
-              <NavLink href="#Home"
-              className="scroll mr-3"
-              >
-                HOME
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink  href="#about-us"
-              className="scroll mr-3"
-              >
-                ABOUT
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink  href="#services"
-              className="scroll mr-3"
-              >
-                SERVICES
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink  href="#contact-us"
-              className="scroll mr-3"
-              >
-                CONTACT US
+             <NavItem className="active">
+              <NavLink tag="a" href="/" className="mr-3">
+                  HOME
               </NavLink>
             </NavItem>
             <NavItem>
