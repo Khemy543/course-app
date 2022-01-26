@@ -131,11 +131,10 @@ export default function Training(){
             <Col md="11" className="ml-auto mr-auto">
                 <Row>
                 {trainings.map((value, index)=>(
-                    <Col md="4">
+                    <Col md="4" key={value.id}>
                     <Card className="main_card" style={{overflow:"hidden", marginBottom:"20px"}}>
                     <div className="cover">
-                        <CardImg top width="100%" src={about} alt="Card image cap" className="card_image" style={{position:"relative"}}/>
-                        
+                        <CardImg top width="100%" src={`./img/${value.image}`} alt="Card image cap" className="card_image" style={{position:"relative"}}/>
                         <a style={{borderRadius:"10px", color:"white",backgroundColor:"#17d0cf"}}
                         role="button" className="next btn button" href={`/course/${value.title}/${value.id}/training/details`}>View details <i className="fa fa-chevron-right"></i></a>
                     </div>

@@ -4,6 +4,7 @@ const data = {
                 {
                     id: 1,
                     title : 'Senior-Level Public Leadership Program(SLPLP)',
+                    image : 'slplp.png',
                     modules : [
                         {
                             id : 1,
@@ -127,6 +128,7 @@ const data = {
                 {
                     id:2,
                     title : 'The Succes Prone Manager(SMP)',
+                    image : 'smp.png',
                     modules : [
                         {
                             id : 1,
@@ -264,6 +266,7 @@ const data = {
                 {
                     id:3,
                     title:"Turbulence Proof Leader",
+                    image : 'tmp.png',
                     modules:[
                         {
                             id:1,
@@ -378,6 +381,7 @@ const data = {
                 {
                     id:4,
                     title:"Building High Performing Teams",
+                    image : 'bhpt.png',
                     introduction : `Much workplace inefficient performance is not due to lack of capacity;
                     It is due to people not being prepared to work cooperatively - people sacrficing team goals for individual goals.
                     Several people hold back productive ability if they lack appreciation for working as a team. Team builing, if done carefully
@@ -441,6 +445,7 @@ const data = {
                 {
                     id:5,
                     title:"Managing Change",
+                    image : 'mc.png',
                     modules:[
 
                     ]
@@ -448,6 +453,7 @@ const data = {
                 {
                     id:6,
                     title:"Mastering supervision",
+                    image : 'ms.png',
                     introduction:`Supervisors (who are actually managers, in a technical sense) occupy a crucial
                     position in an organisation's agenda and capacity to get its Management's hand on the nitty-gritties of everday work.
                     As the employee's first direct contact with the organisation's Management, the supervisor models and shapes the employee's concept
@@ -472,6 +478,7 @@ const data = {
                 {
                     id:7,
                     title:"Project Mangement Training Programme",
+                    image : 'pm.png',
                     modules:[
                         {
                             id:1,
@@ -496,13 +503,43 @@ const data = {
             ]
         },
         consultancy : {
-            private : [],
-            public : []
+            public : [
+                {
+                    id:1,
+                    title : 'Exclusively Public Sector Chief Executives (EPSCE)',
+                    aim : `The CEO's job is to ensure their organisation attains its strategic goals through the judicious and prudent allocation and utilization of the organisation's resources
+                    (human, materials, financial, technological). The EPSCE initiative was birthed to address peculiar issues that CEOs face`,
+
+                },
+                {
+                    id:2,
+                    title : "Public Sector Support International (Retooling Government for Results) Cost-Saving Strategies for Governments and Public Sectors",
+
+                },
+
+                {
+                    id:3,
+                    title : 'The Public Service Exellence Programme'
+                }
+            ],
+            private : [
+                {
+                    id:1,
+                    title : 'HR Transformations',
+                    aim : `HR transformation seeks to change the HR function itself that will in turn, transform the organisation in its approach to conducting business.
+                    The first part of our HR transformation consultancy focuses on the changes that HR as a functional unit can undergo in order to increase its value to the business.`
+                },
+                {
+                    id:2,
+                    title : "HR Outsourcing Modules"
+                }
+            ]
         },
         bestCourses : [
             {
                 id: 1,
                 title : 'Senior-Level Public Leadership Program(SLPLP)',
+                image:'slplp.png',
                 modules : [
                     {
                         id : 1,
@@ -626,6 +663,7 @@ const data = {
             {
                 id:2,
                 title : 'The Succes Prone Manager(SMP)',
+                image:"smp.png",
                 modules : [
                     {
                         id : 1,
@@ -763,6 +801,7 @@ const data = {
             {
                 id:3,
                 title:"Turbulence Proof Leader",
+                image:"tmp.png",
                 modules:[
                     {
                         id:1,

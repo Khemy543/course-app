@@ -869,7 +869,7 @@ function LandingPage() {
                           <CardImg
                             top
                             width="100%"
-                            src={about}
+                            src={`./img/${value.image}`}
                             alt="Card image cap"
                             className="card_image"
                             style={{ position: "relative" }}

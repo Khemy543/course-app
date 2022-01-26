@@ -25,7 +25,6 @@ import logo from "../../assets/img/logo.jpeg";
 
 export default function CourseDetails(props){
     const [navbarColor, setNavbarColor] = React.useState('info');
-    const [color, setColor] = React.useState('white');
     const [collapseOpen, setCollapseOpen] = React.useState(false);
     const [course, setCourse] = React.useState({});
     const [title, setTitle] = React.useState('')
@@ -49,7 +48,7 @@ export default function CourseDetails(props){
 
         setCourse(selctedCourse);
       }
-    },[])
+    },[props.match.params])
 
     return(
         <div>
@@ -132,7 +131,7 @@ export default function CourseDetails(props){
             <Col>
             <div>
                 <h2 className="big-text" style={{marginLeft:0, color:"black"}}>
-                    <strong>{title}</strong>
+                    <strong>{course.title}</strong>
                 </h2>
                 <p>{course.introduction}</p>
                 
@@ -186,7 +185,7 @@ export default function CourseDetails(props){
              </Col>
             <Col md="4">
             <Card>
-              <CardImg top width="100%" src={about} alt="Card image cap" />
+              <CardImg top width="100%" src={`./img/${course && course.image}`} alt="Card image cap" />
               <CardBody>
                 <h1 style={{fontWeight:700}}>{course.name}</h1>
                 <CardTitle tag="h5">{course.title}</CardTitle>

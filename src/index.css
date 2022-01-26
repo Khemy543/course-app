@@ -379,6 +379,8 @@
 .card_image{
   transition: transform .2s;
   overflow: hidden;
+  object-fit: cover;
+  height:250px;
 }
 .main_card:hover .card_image{
   -ms-transform: scale(1.1); /* IE 9 */
