@@ -1,5 +1,7 @@
 import React from "react";
 import AuthFooter from "components/Footers/AuthFooter";
+import API from '../api.js';
+import { addNotification } from '../actions/indexActions.js'
 // Import css files
 import {
   Collapse,
@@ -92,11 +94,8 @@ var clientSettings = {
   ],
 };
 
-function handleFormSubmit() {
-  console.log("submitted");
-}
 
-function LandingPage() {
+function LandingPage(props) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [color, setColor] = React.useState("white");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -106,6 +105,27 @@ function LandingPage() {
   const [phone, setPhone] = React.useState("");
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
+
+  console.log(props)
+
+
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  try {
+    const response = await API.post('/send/enquiry/mail',{
+      name, email, phone, subject, message
+    });
+    
+    if(response && response.data){
+    setEmail("");
+    setName("");
+    setPhone("");
+    setSubject("");
+    setMessage("");
+    }
+  } catch (error) {
+  }
+}
 
   const newItems = [
     {
