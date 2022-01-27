@@ -13,11 +13,10 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          port: ${{ secrets.SERVER_PORT }}
 
           script: |
             echo "Login succesfull"
-            git clone git@github.com:Khemy543/SMP.git
+            git clone git@github.com:Khemy543/course-app.git
             cd SMP
             npm install
             npm run build
