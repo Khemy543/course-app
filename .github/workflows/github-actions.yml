@@ -21,6 +21,6 @@ jobs:
             cd SMP
             npm install
             npm run build
-            sudo cp -R dist/* /var/www/html/admin.smp.com 
+            sudo cp -R build/* /var/www/html/resourcegsr.com
             cd ~
-            sudo rm -rf SMP
+            sudo rm -rf course-app

@@ -4,4 +4,3 @@ package-lock.json
 /build
 .eslintcache
 .env
-.github
