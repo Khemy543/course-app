@@ -1,7 +1,7 @@
 import React from "react";
 import AuthFooter from "components/Footers/AuthFooter";
 import API from '../api.js';
-import { addNotification } from '../actions/indexActions.js'
+import { Toast, ToastBody, ToastHeader } from 'reactstrap';
 // Import css files
 import {
   Collapse,
@@ -105,6 +105,7 @@ function LandingPage(props) {
   const [phone, setPhone] = React.useState("");
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [error, setError] = React.useState({})
 
   console.log(props)
 
@@ -122,6 +123,16 @@ async function handleFormSubmit(e) {
     setPhone("");
     setSubject("");
     setMessage("");
+    setError({
+      color: 'success',
+      title: 'Email Sent!',
+      text: "Thank you, we will get back to you soon",
+      showToast: true
+    });
+
+    setTimeout(() => {
+      setError({})
+    }, 5000)
     }
   } catch (error) {
   }
@@ -307,6 +318,16 @@ async function handleFormSubmit(e) {
 
   return (
     <div>
+    <div className={`p-3 bg-${error.color} my-2 rounded white`} style={{position:'fixed', right:20, zIndex:9999}}>
+        <Toast isOpen={error.showToast} transition>
+          <ToastHeader toggle={()=>setError({})}>
+            {error.title}
+          </ToastHeader>
+          <ToastBody>
+            {error.text}
+          </ToastBody>
+        </Toast>
+      </div>
       <div id="app">
         {/*Home Start */}
         <h1 className="sr-only">Home section</h1>
