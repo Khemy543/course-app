@@ -185,7 +185,7 @@ export default function CourseDetails(props){
              </Col>
             <Col md="4">
             <Card>
-              <CardImg top width="100%" src={`./img/${course && course.image}`} alt="Card image cap" />
+              <CardImg top width="100%" src={`/img/${course.image}`} alt="Card" className='card_image' />
               <CardBody>
                 <h1 style={{fontWeight:700}}>{course.name}</h1>
                 <CardTitle tag="h5">{course.title}</CardTitle>
