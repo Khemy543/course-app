@@ -58,6 +58,7 @@ import face4 from "assets/img/brand/face4.jpg";
 import face1 from "assets/img/brand/face1.jpg";
 //components
 import Slider from "react-slick";
+import CalendarTable from "components/Tables/CalendarTable.js";
 
 var settings = {
   speed: 500,
@@ -398,6 +399,11 @@ async function handleFormSubmit(e) {
                   </NavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink href="#calendar" className="scroll mr-3">
+                    CALENDAR
+                  </NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink href="#contact-us" className="scroll mr-3">
                     CONTACT US
                   </NavLink>
@@ -647,17 +653,16 @@ async function handleFormSubmit(e) {
           </section>
           <section id="about-us">
             <div id="about us-1" className="big-padding">
-              <div className="container">
+              <div className="container"x>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="left-section">
                       <img
                         src={face1}
-                        width={542}
                         height={470}
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "cover", width:'100%' }}
                         alt="pineapple"
-                        className="element-center"
+                        className="img-responsive"
                       />
                       <div
                         className="overlay"
@@ -791,7 +796,7 @@ async function handleFormSubmit(e) {
 
                 <div className="container mid-level-padding">
                         <h2 className="big-text text-center mb-5"><strong>CONSULTANCY</strong></h2>
-                    <div className="row">
+                    <div className="row gx-5">
                         <div className="col-md-6">
                         <div>
                             <h3>We have three consultancy products that have been designed exclusively for public sector organisation, and
@@ -830,7 +835,7 @@ async function handleFormSubmit(e) {
                             </a>
                           </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6 d">
                         <img
                             src={face1}
                             width={542}
@@ -842,10 +847,31 @@ async function handleFormSubmit(e) {
                     </div>
                 </div>  
               </div>
+            </div>
+            {/* service-2 end */}
+          </section>
 
-              {/*  service-2 end */}
-              {/* service-2 start */}
-              <div id="service-3" className="pt-8">
+          <section id="calendar" className=" pt-8">
+            <div className="container">
+            <h4 className="head-subtitle">GSR Consulting</h4>
+                  <h2
+                    className="big-text"
+                    style={{ marginLeft: 0, color: "black" }}
+                  >
+                    <strong>2022 </strong>Training Calendar
+                  </h2>
+                  <hr />
+                  <div className="row wow fadeInUp" data-wow-duration="2s">
+                    <div className="col-sm-12">
+                      <div className="bottom-section text-center" style={{ overflow:"auto" }}>
+                        <CalendarTable />
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </section>
+
+            <section id="service-3" className="pt-8">
                 <div className="container">
                   <h4 className="head-subtitle">Our Clients</h4>
                   <h2
@@ -880,13 +906,12 @@ async function handleFormSubmit(e) {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            {/* service-2 end */}
-          </section>
+              </section>
+
+
           {/*  services end*/}
           <section id="portfolio">
-            <div id="portfolio3" className="mid-level-padding">
+            <div id="portfolio3" className="mid-level-padding mt-8" style={{backgroundColor:'#f5f5f5'}}>
               <div className="container">
                 {/* <div className="row">
                     <div className="col-xs-12">
