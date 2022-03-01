@@ -719,7 +719,7 @@ const data = {
                         departments, such as Human Resource, Finance, Operations,
                         Sales, etc. They will have a number of managers reporting to
                         them. Their role will require them to effectively combine strategic
-                        focus and operational efficiency, and they will do well to discipline themselves to stay put to that by developing and empowering their direct reports to be responsible for the day-to-day
+                        focus and operational efficiency, and they will do well to discipline themselves to stay put to that by developing and empowering their direct reports to be responsible for the day to day
                         routine tasks, whilst they focus on key strategic issues.`,
                         objectives : [
                             {
