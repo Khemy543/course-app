@@ -149,7 +149,7 @@ export default function CourseDetails(props){
               <br/>
             <div style={{backgroundColor:"#EEEEEE", padding:"15px"}}>
 
-                {course.objectives > 0?
+                {course.objectives.length > 0?
                 <div>
                   {course.objectives.length > 0 ? <h1>Objectives</h1> : ''}
                   {course.objectives && course.objectives.map((value, key) => (
@@ -170,7 +170,7 @@ export default function CourseDetails(props){
                   <p className="mt--2">{value.aim}</p>
                 </div>
                 :null}
-                {value.objectives > 0?
+                {value.objectives.length > 0?
                 <div>
                   {value.objectives.length > 0 ?  <p><strong>Objectives</strong></p> : ''}
                  
