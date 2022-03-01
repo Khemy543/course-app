@@ -186,9 +186,8 @@ const data = {
                             departments, such as Human Resource, Finance, Operations,
                             Sales, etc. They will have a number of managers reporting to
                             them. Their role will require them to effectively combine strategic
-                            focus and operational efficiency, and they will do well to disci-
-                            pline themselves to stay put to that by developing and empow-
-                            ering their direct reports to be responsible for the day-to-day
+                            focus and operational efficiency, and they will do well to discipline themselves to stay put to that by developing and 
+                            empowering their direct reports to be responsible for the day to day
                             routine tasks, whilst they focus on key strategic issues.`,
                             objectives : [
                                 {
@@ -223,9 +222,9 @@ const data = {
                                     id:2,
                                     message : `It requires
                                     discretion and discernment, accurate decision making and
-                                    reasonable and calculated risk-taking. At the same time, it entails
+                                    reasonable and calculated risk taking. At the same time, it entails
                                     and requires the institution and implementation of systems that
-                                    ensure safe risk-taking. It calls for a concern for both
+                                    ensure safe risk taking. It calls for a concern for both
                                     results/productivity and people.`
                                 }
                             ]
@@ -239,8 +238,8 @@ const data = {
                             organisation and set the agenda for its growth and progress. Boards
                             and Board Chairs face new management challenges demanding
                             new ways of thinking and new levels of innovation underpinned by
-                            results-based strategies, and a robust risk management framework.
-                            In response to this fast-pace changing landscape, we have designed
+                            results based strategies, and a robust risk management framework.
+                            In response to this fast pace changing landscape, we have designed
                             the Success-prone Manager Board Level Programme to help Board
                             Chairs and members who are poised to make a difference.`,
                             objectives : [
@@ -254,8 +253,8 @@ const data = {
                                 {
                                     id:2,
                                     message : `It aims to develop Board Chairperson’s
-                                    capacity to inspire, gain commitment from and harness the poten-
-                                    tials of board members and Top Management, and to inspire a
+                                    capacity to inspire, gain commitment from and harness the 
+                                    potentials of board members and Top Management, and to inspire a
                                     performance culture through a competitive rewards management
                                     strategy.`
                                 }
@@ -302,8 +301,7 @@ const data = {
                             how to grow their influence and increase their power to get things done.
                             They need to develop the capacity of their direct reports and delegate
                             authority to them to make a number of relevant decisions. Overall, they will
-                            be developing the next generation of leaders, and will be laying the foun-
-                            dation for their own replacement in the long term.`,
+                            be developing the next generation of leaders, and will be laying the foundation for their own replacement in the long term.`,
                             objectives:[]
                         },
                         {
@@ -331,7 +329,7 @@ const data = {
                             and departments they lead. The strategic focus of training at this stage is to
                             develop leaders who will take control of the corporate development of their
                             organisation, focusing on the key areas, and metrics by which the
-                            organisation measures its bottom-line. They will combine visionary
+                            organisation measures its bottom line. They will combine visionary
                             leadership with motivational leadership that will translate to strategic
                             leadership, helping the organisation to focus both on long term strategic
                             issues and on short term controls that ensure the organisation’s continued
@@ -350,7 +348,7 @@ const data = {
                             CEOs, MDs, Executive Directors, and Chief Directors (Government
                             Ministries). Organisations are true reflections of their leaders; there can be
                             no assertion more basic than that. Leaders at this stage are the most
-                            powerful persons whose actions or inactions have far-reaching impact on
+                            powerful persons whose actions or inactions have far reaching impact on
                             their organisations. These top executives will have been providing
                             leadership for heads of their departments or functional divisions. Training at
                             this stage is aimed to equip the top executive with the skills to navigate the
@@ -366,13 +364,13 @@ const data = {
                             id:6,
                             name : 'The Turbulence-Proof Leader Level 6 (Board Level Mastery)',
                             aim : `The Board Level Mastery module equips and empowers Board Members,
-                            Board Chairs and Secretaries to enable them to perform their basic func-
-                            tions of enterprise, oversight and accountability in respect of the organisa-
-                            tion they govern. The required competencies at this level include effective
+                            Board Chairs and Secretaries to enable them to perform their basic 
+                            functions of enterprise, oversight and accountability in respect of the 
+                            organisation they govern. The required competencies at this level include effective
                             board governance, corporate governance, strategic thinking and strategic
                             orientation, risk management and effective accountability. The ability to
-                            digest and make sense of massive company information, including techni-
-                            cal business proposals and policies, and financial statements, and make
+                            digest and make sense of massive company information, including technical
+                            business proposals and policies, and financial statements, and make
                             informed decisions on these, are key success factors.`,
                             objectives : []
                         }
@@ -455,7 +453,7 @@ const data = {
                     title:"Mastering supervision",
                     image : 'ms.png',
                     introduction:`Supervisors (who are actually managers, in a technical sense) occupy a crucial
-                    position in an organisation's agenda and capacity to get its Management's hand on the nitty-gritties of everday work.
+                    position in an organisation's agenda and capacity to get its Management's hand on the nittygritties of everday work.
                     As the employee's first direct contact with the organisation's Management, the supervisor models and shapes the employee's concept
                     of the ideal manageer. It is their responsibility to bring management close to the employee, and to ensure that they develop the right behaviors,
                     disciplines, skills and attitude required to succeed in the performance of the jobs they are recruited and paid to perform. Strong, efficient and effective supervisors
@@ -631,11 +629,11 @@ const data = {
                     {
                         id:3,
                         name : 'SLPLP Module 3',
-                        aim : 'To introduce the basic tenets of new public management (NPM) to directors of MDAs as a way of driving eciency and cost containment in the public sector',
+                        aim : 'To introduce the basic tenets of new public management (NPM) to directors of MDAs as a way of driving efficiency and cost containment in the public sector',
                         objectives : [
                             {
                                 id:1,
-                                message : ' Explain how bureaucratic ineciencies impact on the delivery of public services'
+                                message : ' Explain how bureaucratic inefficiencies impact on the delivery of public services'
                             },
                             {
                                 id : 2,
@@ -655,7 +653,7 @@ const data = {
                             },
                             {
                                 id:6,
-                                message : 'Assess the eectiveness of adopting private sector practices to the public sector'
+                                message : 'Assess the effectiveness of adopting private sector practices to the public sector'
                             }                     ]
                     }
                 ]
@@ -721,9 +719,7 @@ const data = {
                         departments, such as Human Resource, Finance, Operations,
                         Sales, etc. They will have a number of managers reporting to
                         them. Their role will require them to effectively combine strategic
-                        focus and operational efficiency, and they will do well to disci-
-                        pline themselves to stay put to that by developing and empow-
-                        ering their direct reports to be responsible for the day-to-day
+                        focus and operational efficiency, and they will do well to discipline themselves to stay put to that by developing and empowering their direct reports to be responsible for the day-to-day
                         routine tasks, whilst they focus on key strategic issues.`,
                         objectives : [
                             {
@@ -758,9 +754,9 @@ const data = {
                                 id:2,
                                 message : `It requires
                                 discretion and discernment, accurate decision making and
-                                reasonable and calculated risk-taking. At the same time, it entails
+                                reasonable and calculated risk taking. At the same time, it entails
                                 and requires the institution and implementation of systems that
-                                ensure safe risk-taking. It calls for a concern for both
+                                ensure safe risk taking. It calls for a concern for both
                                 results/productivity and people.`
                             }
                         ]
@@ -774,8 +770,8 @@ const data = {
                         organisation and set the agenda for its growth and progress. Boards
                         and Board Chairs face new management challenges demanding
                         new ways of thinking and new levels of innovation underpinned by
-                        results-based strategies, and a robust risk management framework.
-                        In response to this fast-pace changing landscape, we have designed
+                        results based strategies, and a robust risk management framework.
+                        In response to this fast pace changing landscape, we have designed
                         the Success-prone Manager Board Level Programme to help Board
                         Chairs and members who are poised to make a difference.`,
                         objectives : [
@@ -789,8 +785,7 @@ const data = {
                             {
                                 id:2,
                                 message : `It aims to develop Board Chairperson’s
-                                capacity to inspire, gain commitment from and harness the poten-
-                                tials of board members and Top Management, and to inspire a
+                                capacity to inspire, gain commitment from and harness the potentials of board members and Top Management, and to inspire a
                                 performance culture through a competitive rewards management
                                 strategy.`
                             }
@@ -816,7 +811,7 @@ const data = {
                         intertwined with, and at the same time, distinguished from, management.
                         The module introduces important leadership concepts, such as leading self,
                         peers, superiors, and subordinates; developing leadership mindset, as well
-                        as action-centered leadership, where leadership is seen as an activity that
+                        as action centered leadership, where leadership is seen as an activity that
                         occurs in a group setting. The overall aim is to establish the functional
                         importance of leaders – leadership status is earned from the functions one
                         performs in teams, not merely their position.`,
@@ -825,8 +820,7 @@ const data = {
                     {
                         id:2,
                         name:"The Turbulence-Proof Leader Level 2 (Mid-Executive Level Mastery)",
-                        aim :`Leadership is an essential part of management, and to be effective, manag-
-                        ers require some good dose of leadership skills. Similarities and distinctions
+                        aim :`Leadership is an essential part of management, and to be effective, managers require some good dose of leadership skills. Similarities and distinctions
                         between managers and leaders are clearly laid out at this stage, where
                         managers likely have a number of managers working under them. They
                         need to be able to provide leadership for their subordinates to become
@@ -837,8 +831,7 @@ const data = {
                         how to grow their influence and increase their power to get things done.
                         They need to develop the capacity of their direct reports and delegate
                         authority to them to make a number of relevant decisions. Overall, they will
-                        be developing the next generation of leaders, and will be laying the foun-
-                        dation for their own replacement in the long term.`,
+                        be developing the next generation of leaders, and will be laying the foundation for their own replacement in the long term.`,
                         objectives:[]
                     },
                     {
@@ -866,7 +859,7 @@ const data = {
                         and departments they lead. The strategic focus of training at this stage is to
                         develop leaders who will take control of the corporate development of their
                         organisation, focusing on the key areas, and metrics by which the
-                        organisation measures its bottom-line. They will combine visionary
+                        organisation measures its bottom line. They will combine visionary
                         leadership with motivational leadership that will translate to strategic
                         leadership, helping the organisation to focus both on long term strategic
                         issues and on short term controls that ensure the organisation’s continued
@@ -885,7 +878,7 @@ const data = {
                         CEOs, MDs, Executive Directors, and Chief Directors (Government
                         Ministries). Organisations are true reflections of their leaders; there can be
                         no assertion more basic than that. Leaders at this stage are the most
-                        powerful persons whose actions or inactions have far-reaching impact on
+                        powerful persons whose actions or inactions have far reaching impact on
                         their organisations. These top executives will have been providing
                         leadership for heads of their departments or functional divisions. Training at
                         this stage is aimed to equip the top executive with the skills to navigate the
@@ -901,13 +894,10 @@ const data = {
                         id:6,
                         name : 'The Turbulence-Proof Leader Level 6 (Board Level Mastery)',
                         aim : `The Board Level Mastery module equips and empowers Board Members,
-                        Board Chairs and Secretaries to enable them to perform their basic func-
-                        tions of enterprise, oversight and accountability in respect of the organisa-
-                        tion they govern. The required competencies at this level include effective
+                        Board Chairs and Secretaries to enable them to perform their basic functions of enterprise, oversight and accountability in respect of the organisation they govern. The required competencies at this level include effective
                         board governance, corporate governance, strategic thinking and strategic
                         orientation, risk management and effective accountability. The ability to
-                        digest and make sense of massive company information, including techni-
-                        cal business proposals and policies, and financial statements, and make
+                        digest and make sense of massive company information, including technical business proposals and policies, and financial statements, and make
                         informed decisions on these, are key success factors.`,
                         objectives : []
                     }
