@@ -290,8 +290,8 @@ const data = {
                         {
                             id:2,
                             name:"The Turbulence-Proof Leader Level 2 (Mid-Executive Level Mastery)",
-                            aim :`Leadership is an essential part of management, and to be effective, manag-
-                            ers require some good dose of leadership skills. Similarities and distinctions
+                            aim :`Leadership is an essential part of management, and to be effective, managers
+                            require some good dose of leadership skills. Similarities and distinctions
                             between managers and leaders are clearly laid out at this stage, where
                             managers likely have a number of managers working under them. They
                             need to be able to provide leadership for their subordinates to become

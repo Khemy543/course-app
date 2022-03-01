@@ -149,9 +149,9 @@ export default function CourseDetails(props){
               <br/>
             <div style={{backgroundColor:"#EEEEEE", padding:"15px"}}>
 
-                {course.objectives?
+                {course.objectives > 0?
                 <div>
-                  {course.objectives.length !== 0 ? <h1>Objectives</h1> : ''}
+                  {course.objectives.length > 0 ? <h1>Objectives</h1> : ''}
                   {course.objectives && course.objectives.map((value, key) => (
                   <p><i className="fa fa-check mr-2"/>{value.name}</p>
                   ))}
@@ -170,9 +170,10 @@ export default function CourseDetails(props){
                   <p className="mt--2">{value.aim}</p>
                 </div>
                 :null}
-                {value.objectives?
+                {value.objectives > 0?
                 <div>
-                  <p><strong>Objectives</strong></p>
+                  {value.objectives.length > 0 ?  <p><strong>Objectives</strong></p> : ''}
+                 
                   {value.objectives && value.objectives.map((obj, index)=>(
                   <p><i className="fa fa-check mr-2"/>{obj.message}</p>
                   ))}
@@ -189,7 +190,7 @@ export default function CourseDetails(props){
               <CardBody>
                 <h1 style={{fontWeight:700}}>{course.name}</h1>
                 <CardTitle tag="h5">{course.title}</CardTitle>
-                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                {/* <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText> */}
                 <Link to="/payment/user-information">
                 <Button color="primary" block >REGISTER</Button>
                 </Link>
