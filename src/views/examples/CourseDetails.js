@@ -151,7 +151,7 @@ export default function CourseDetails(props){
 
                 {course.objectives?
                 <div>
-                  <h1>Objectives</h1>
+                  {course.objectives.length !== 0 ? <h1>Objectives</h1> : ''}
                   {course.objectives && course.objectives.map((value, key) => (
                   <p><i className="fa fa-check mr-2"/>{value.name}</p>
                   ))}

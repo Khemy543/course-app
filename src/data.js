@@ -96,11 +96,11 @@ const data = {
                         {
                             id:3,
                             name : 'SLPLP Module 3',
-                            aim : 'To introduce the basic tenets of new public management (NPM) to directors of MDAs as a way of driving eciency and cost containment in the public sector',
+                            aim : 'To introduce the basic tenets of new public management (NPM) to directors of MDAs as a way of driving efficiency and cost containment in the public sector',
                             objectives : [
                                 {
                                     id:1,
-                                    message : ' Explain how bureaucratic ineciencies impact on the delivery of public services'
+                                    message : ' Explain how bureaucratic inefficiencies impact on the delivery of public services'
                                 },
                                 {
                                     id : 2,
@@ -120,7 +120,7 @@ const data = {
                                 },
                                 {
                                     id:6,
-                                    message : 'Assess the eectiveness of adopting private sector practices to the public sector'
+                                    message : 'Assess the effectiveness of adopting private sector practices to the public sector'
                                 }                     ]
                         }
                     ]
@@ -430,7 +430,7 @@ const data = {
                         },
                         {
                             id:3,
-                            name :'Module 3: Teambuilding - The Proces'
+                            name :'Module 3: Teambuilding - The Process'
                         },
                         {
                             id:4,
@@ -781,7 +781,7 @@ const data = {
                         objectives : [
                             {
                                 id:1,
-                                message:`raining at this level aims to support board members to develop
+                                message:`Training at this level aims to support board members to develop
                                 good corporate governance practices and strategic focus that
                                 underpins excellent performance of the organisation even in
                                 turbulent environments.`
