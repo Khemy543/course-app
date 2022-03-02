@@ -80,7 +80,7 @@ export default function SeniorLevel(){
         >
           <Nav navbar>
              <NavItem className="active">
-              <NavLink href="#Home"
+              <NavLink tag="a" href="/"
               className="scroll mr-3"
               >
                 HOME

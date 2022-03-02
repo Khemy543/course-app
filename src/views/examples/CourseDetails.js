@@ -20,7 +20,7 @@ import AuthFooter from 'components/Footers/AuthFooter.js'
 import about from 'assets/img/brand/aboutus.jpeg';
 import { Link } from 'react-router-dom';
 import data from '../../data.js';
-import logo from "../../assets/img/logo.jpeg";
+import logo from "../../assets/img/logo1.jpg";
 
 
 export default function CourseDetails(props){
@@ -149,7 +149,7 @@ export default function CourseDetails(props){
               <br/>
             <div style={{backgroundColor:"#EEEEEE", padding:"15px"}}>
 
-                {course.objectives.length > 0?
+                {course.objectives ?
                 <div>
                   {course.objectives.length > 0 ? <h1>Objectives</h1> : ''}
                   {course.objectives && course.objectives.map((value, key) => (
@@ -170,7 +170,7 @@ export default function CourseDetails(props){
                   <p className="mt--2">{value.aim}</p>
                 </div>
                 :null}
-                {value.objectives.length > 0?
+                {value.objectives ?
                 <div>
                   {value.objectives.length > 0 ?  <p><strong>Objectives</strong></p> : ''}
                  

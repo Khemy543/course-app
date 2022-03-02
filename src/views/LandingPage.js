@@ -23,7 +23,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import data from '../data.js'
 //images
-import logo from "../assets/img/logo.jpeg";
+import logo from "../assets/img/logo1.jpg";
 import client1 from "../assets/img/brand/client1.jpeg";
 import client2 from "../assets/img/brand/client2.jpeg";
 import client3 from "../assets/img/brand/client3.jpeg";
