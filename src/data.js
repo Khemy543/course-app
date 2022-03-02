@@ -127,7 +127,7 @@ const data = {
                 },
                 {
                     id:2,
-                    title : 'The Succes Prone Manager(SMP)',
+                    title : 'The Succes Prone Manager(SPM)',
                     image : 'smp.png',
                     modules : [
                         {
@@ -245,7 +245,7 @@ const data = {
                             objectives : [
                                 {
                                     id:1,
-                                    message:`raining at this level aims to support board members to develop
+                                    message:`Training at this level aims to support board members to develop
                                     good corporate governance practices and strategic focus that
                                     underpins excellent performance of the organisation even in
                                     turbulent environments.`
@@ -497,6 +497,22 @@ const data = {
                             objectives:[]
                         }
                     ]
+                },
+                {
+                    id:8,
+                    title:"Atttudes For Business Success",
+                    image:"attitude.png",
+                    modules:[],
+                    scope: {
+                        content: `In order to address the generally low level of productivity and unacceptable level of public service quality found in most public sector institutions, this training package 
+                                    has been carefully designed to capture what the employee’s attitudes have to be
+                                    towards each of the important constituencies they interact with at work on a daily
+                                    basis. The training will outline and examine, for each constituency, negative attitudes
+                                    that must be discarded, as well as positive ones that must be nurtured. We address the
+                                    issue of employees’ attitudes as they relate to seven different constituencies, as
+                                    follows;`,
+                        constituent: ['Self', 'Peers', 'Superiors', 'Surbordinates', 'Customers', 'Job', 'Organization']
+                    }
                 }
             ]
         },
@@ -903,12 +919,7 @@ const data = {
                     }
                 ]
             },
-            {
-                id:3,
-                title:"Atttudes For Business Success",
-                image:"tmp.png",
-                modules:[]
-            }
+        
         ]
     };
 

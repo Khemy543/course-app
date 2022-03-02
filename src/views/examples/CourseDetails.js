@@ -158,35 +158,53 @@ export default function CourseDetails(props){
                 </div>
                 :
                 null}
-              <h1>Modules</h1>
-              
-              <br/>
-              {course.modules && course.modules.map((value, key) => (
-                <div key={value.id} className="mb-4">
-                <h3>{value.name}</h3>
-                {value.aim ?
-                <div>
-                  <p><strong>Aim :</strong></p>
-                  <p className="mt--2">{value.aim}</p>
-                </div>
-                :null}
-                {value.objectives ?
-                <div>
-                  {value.objectives.length > 0 ?  <p><strong>Objectives</strong></p> : ''}
-                 
-                  {value.objectives && value.objectives.map((obj, index)=>(
-                  <p><i className="fa fa-check mr-2"/>{obj.message}</p>
+
+              {course.modules ?
+              <div>
+               {course.modules.length > 0 ? <h1>Modules</h1> : ''}
+                <br/>
+                {course.modules && course.modules.map((value, key) => (
+                  <div key={value.id} className="mb-4">
+                  <h3>{value.name}</h3>
+                  {value.aim ?
+                  <div>
+                    <p><strong>Aim :</strong></p>
+                    <p className="mt--2">{value.aim}</p>
+                  </div>
+                  :null}
+                  {value.objectives ?
+                  <div>
+                    {value.objectives.length > 0 ?  <p><strong>Objectives</strong></p> : ''}
+                  
+                    {value.objectives && value.objectives.map((obj, index)=>(
+                    <p><i className="fa fa-check mr-2"/>{obj.message}</p>
+                    ))}
+                  </div>  
+                  :null}
+                  
+                  </div>
+                ))}
+              </div>
+              : null}
+
+              {course.scope ?
+              <div>
+                <h1>Scope & Content</h1>
+                <p>{course.scope.content}</p>
+                <div className="list mb-4">
+                <ul>
+                  {course.scope.constituent && course.scope.constituent.map((value, key) => (
+                      <li>{value}</li>
                   ))}
-                </div>  
-                :null}
-                
+                </ul>
                 </div>
-              ))}
+              </div>
+              : null}
             </div>
              </Col>
             <Col md="4">
             <Card>
-              <CardImg top width="100%" src={`/img/${course.image}`} alt="Card" className='card_image' />
+              <CardImg top width="100%" bottom src={`/img/${course.image}`} alt="Card" className='card_image' />
               <CardBody>
                 <h1 style={{fontWeight:700}}>{course.name}</h1>
                 <CardTitle tag="h5">{course.title}</CardTitle>
