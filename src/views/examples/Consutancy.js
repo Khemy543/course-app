@@ -18,7 +18,7 @@ import {
 import AuthFooter from 'components/Footers/AuthFooter.js'
 import about from 'assets/img/brand/aboutus.jpeg';
 import data from '../../data.js';
-import logo from "../../assets/img/logo.jpeg";
+import logo from "../../assets/img/logo1.jpg";
 
 
 export default function Consultancy(props){
