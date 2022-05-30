@@ -678,31 +678,25 @@ async function handleFormSubmit(e) {
                       </h2>
                       <hr />
                       <p>
-                        Welcome to our site! We’re excited you’re exploring our
-                        service offerings. For more than a decade, our Company
-                        has been a key industry player in management and
-                        leadership development training and consulting.
+                        We’re excited you’re exploring our site. Our Company has been doing management and leadership
+                        development training and consulting for more thana a decade! This should build confidence whether
+                        you’re exploring our services for the first time, or have given us business in the past.
                       </p>
 
                       <h4>Our Passion</h4>
                       <p>
-                        We take a great delight in seeing organizations become
-                        efficient and deliver results through the deployment of
-                        well-developed and motivated employees, particularly top
-                        executives.
+                        To see organizations become more efficient through the deployment of well-developed and
+                        motivated employees, particularly top executives.
                       </p>
                       <h4>Our Vision</h4>
                       <p>
-                        We exist to deliver affordable, quality and relevant
-                        management and leadership training and consultancy
-                        solutions, employing modern adult learning tools and
-                        methods
+                        To be Africa’s leading provider of high-impact, leadership and management development and
+                        consultancy services
                       </p>
                       <h4>Our Mission</h4>
                       <p>
-                        To be Africa’s leading provider of high-impact,
-                        leadership and management training and consultancy
-                        services
+                        Delivering affordable relevant management and leadership training and consultancy solutions,
+                        employing modern adult learning tools and methods.
                       </p>
                     </div>
                   </div>
@@ -717,6 +711,27 @@ async function handleFormSubmit(e) {
                 <h2 className="big-text" style={{ marginLeft: "0px" }}>
                   What We <strong>Do</strong>
                 </h2>
+                <p>
+                  We deliver consultancy and training solutions that help managers to manage better, and guide
+                  leaders to lead better and get better bottom-line results for their organizations. <br />
+                </p>
+                <p>
+                <h5>We deliver trainging in two ways</h5>
+                  <span className="list">
+                    <ul>
+                      <li>
+                        <p>
+                          Through in-house arrangements (designed together with clients and delivered within clients’ premises/preferred venue);
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          through our public training programs to which corporations send delegates.
+                        </p>
+                      </li>
+                    </ul>
+                  </span>
+                </p>
                 <hr />
                 <div className="container">
                         <h2 className="big-text text-center mb-5"><strong>TRAININGS</strong></h2>
@@ -851,7 +866,7 @@ async function handleFormSubmit(e) {
             {/* service-2 end */}
           </section>
 
-          <section id="calendar" className=" pt-8">
+          {/* <section id="calendar" className=" pt-8">
             <div className="container">
             <h4 className="head-subtitle">GSR Consulting</h4>
                   <h2
@@ -869,7 +884,7 @@ async function handleFormSubmit(e) {
                     </div>
                   </div>
             </div>
-          </section>
+          </section> */}
 
             <section id="service-3" className="pt-8">
                 <div className="container">

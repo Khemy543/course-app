@@ -540,8 +540,8 @@ const data = {
                 {
                     id:1,
                     title : 'HR Transformations',
-                    aim : `HR transformation seeks to change the HR function itself that will in turn, transform the organisation in its approach to conducting business.
-                    The first part of our HR transformation consultancy focuses on the changes that HR as a functional unit can undergo in order to increase its value to the business.`
+                    aim : `HR transformation seeks to change the HR function itself that will in turn, transform the organisation in its approach to conducting business.`,
+                    modules: `The first part of our HR transformation consultancy focuses on the changes that HR as a functional unit can undergo in order to increase its value to the business. This will require defining HR’s role from four perspectives, as:`
                 },
                 {
                     id:2,
@@ -676,7 +676,7 @@ const data = {
             },
             {
                 id:2,
-                title : 'The Succes Prone Manager(SMP)',
+                title : 'The Succes Prone Manager(SPM)',
                 image:"smp.png",
                 modules : [
                     {

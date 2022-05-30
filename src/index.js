@@ -23,6 +23,7 @@ import Training from "views/examples/Training";
 import SeniorLevel from "views/examples/SeniorLevelProgram";
 import SrollToTop from "react-router-scroll-top";
 import Consultancy from "views/examples/Consutancy";
+import ConsultancyDetails from "views/examples/ConsultancyDetails";
 
 
 const store =  configureStore();
@@ -43,6 +44,7 @@ ReactDOM.render(
         <AuthRedirection exact path="/" component={LandingPage} />
         <Route path="/payment" render={(props) => <Payment {...props} />} />
         <AuthRedirection exact path="/course/:title/:id/:type/details" component={CourseDetails} />
+        <AuthRedirection exact path="/course/:title/:id/:type/consultancy-details" component={ConsultancyDetails} />
         <AuthRedirection exact path="/training-offerings" component={Training} />
         <AuthRedirection exact path="/senior-level-public-leadership" component={SeniorLevel} />
         <AuthRedirection exact path="/consultancy" component={Consultancy} />
