@@ -398,11 +398,11 @@ async function handleFormSubmit(e) {
                     SERVICES
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                   <NavLink href="#calendar" className="scroll mr-3">
                     CALENDAR
                   </NavLink>
-                </NavItem>
+                </NavItem> */}
                 <NavItem>
                   <NavLink href="#contact-us" className="scroll mr-3">
                     CONTACT US

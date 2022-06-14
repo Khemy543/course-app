@@ -522,30 +522,447 @@ const data = {
                     id:1,
                     title : 'Exclusively Public Sector Chief Executives (EPSCE)',
                     aim : `The CEO's job is to ensure their organisation attains its strategic goals through the judicious and prudent allocation and utilization of the organisation's resources
-                    (human, materials, financial, technological). The EPSCE initiative was birthed to address peculiar issues that CEOs face`,
+                    (human, materials, financial, technological).`,
+                    image : 'epsce.jpeg',
+                    objectives: [
+                        {
+                            subtitle: ` The EPSCE initiative was birthed to address peculiar issues that CEOs face:`,
+                            shorts: null,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `Isolation and loneliness at the top – few people to turn to for advice`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Extremely busy schedules`
+                                },
+                                {
+                                    id: 3,
+                                    value: `The contents of mass training programmes don’t benefit them much`
+                                },
+                                {
+                                    id: 4,
+                                    value: `Find it uncomfortable and time-wasting attending seminars with other employees who can’t
+                                    speak their language`
+                                },
+                                {
+                                    id: 5,
+                                    value: `Have questions which take only colleague CEOs to answer effectively`
+                                },
+                                {
+                                    id: 6,
+                                    value: `Confronted by sector/industry-specific issues that require unique solutions`
+                                }
+                            ]
+                        },
+                        {
+                            subtitle: `The EPSCE is:`,
+                            shorts: null,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `A platform for CEs, CEOs, MDs, Chief Executive Directors to meet, share ideas, and
+                                    discuss peculiar sector/industry-specific problems, operational issues`
+                                },
+                                {
+                                    id: 2,
+                                    value: `A place to turn to for advice and coaching when faced with real business challenges to which
+                                    no direct/immediate solutions exist`
+                                }
+                            ]
+                        },
+                        {
+                            subtitle: `Business Networking`,
+                            shorts: `EPSCE offers high-performance Business Networking opportunities, allowing members to share
+                            problems, discuss solutions and do business among each other. With membership drawn from a
+                            diverse mix of professionals, opportunities are created for business leaders to benefit from the
+                            collective expertise of members.`,
+                        },
+                        {
+                            subtitle: `Operational Strategy`,
+                            shorts: null,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `Three-hour meetings each month`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Half day seminars arranged at the request of members`
+                                },
+                                {
+                                    id: 3,
+                                    value: `Access to GSR Consulting learning resources`
+                                },
+                                {
+                                    id: 4,
+                                    value: `An overnight residential training and recreation session once every quarter that allows the
+                                    spouses and families of CEOs to join`
+                                },
+                                {
+                                    id: 5,
+                                    value: `Monthly Knowledge Update Pro gramme: a thirty-minute presentation by the Lead Consultant
+                                    of GSR Consulting and other seasoned consultants and business coaches`
+                                },
+                                {
+                                    id: 6,
+                                    value: `Corporate Coaching and Mentoring`
+                                }
+                            ]
+                        }
+                    ]
 
                 },
                 {
                     id:2,
-                    title : "Public Sector Support International (Retooling Government for Results) Cost-Saving Strategies for Governments and Public Sectors",
+                    title : "Public Sector Support International (PSSI)",
+                    aim:   `Your Government’s Aspirations...
+                    Your manifesto clearly shows that your government has good intentions to deliver public services at a level and
+                    quality expected by the electorate, and your recent campaign message reiterates same. However, in the context of
+                    limited resources amidst unending social needs, and competing pressures on the public purse, realising such
+                      objective could remain a mirage unless an overarching cost-saving strategy is carefully adopted and rigorously
+                    executed`,
+                    image : 'pssi.jpeg',
+                    objectives: [
+                        {
+                            subtitle: `Our Service Promise...`,
+                            shorts:  `Governments that faithfully execute our strategies are guaranteed to save a substantial amount of money. With the
+                            extra money, they can provide more attractive pay and benefits package for public sector workers, reduce
+                           corruption, introduce performance-driven work culture, and significantly improve the quality of service delivery as a
+                            way of increasing their appeal to the electorate whose mandate they need to continue in office.
+                           Our Products and Service`,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `Re-organisation and re-bundling of functional units`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Corporatisaton of large bureaucracies into semi-autonomous units designed around the business of seamless service delivery`
+                                },
+                                {
+                                    id: 3,
+                                    value: `Creation of internal markets and increasing competition in public sector and service delivery`
+                                },
+                                {
+                                    id: 4,
+                                    value: `Enforcing performance contracts in governments and MDAs`
+                                },
+                                {
+                                    id: 5,
+                                    value: `Operating flexible labour employment practices that optimize the capacity of employees`
+                                },
+                                {
+                                    id: 6,
+                                    value: `Creating an Integrated Smart People System (ISPS) that allows employees to be moved round any of the
+                                    MDAs in case of temporary staff shortages – sickness, maternity, bereavement, attendance on courses, retirement, etc. applicable to units with standardised jobs roles, procedures and processes`
+                                },
+                                {
+                                    id: 7,
+                                    value: `Collapsing existing organisation-wide functional units into Specialised Centers for Service Delivery
+                                    (SPECSED) to support a number of MDAs`
+                                }
+                            ]
+                        }
+                    ]
 
                 },
 
                 {
                     id:3,
-                    title : 'The Public Service Exellence Programme'
+                    title : 'The Public Service Exellence Programme',
+                    aim: `Individuals and organisations possess incredible potentials; sadly, only few people are able to
+                    develop such potentials.
+                    This is due to the fact that there are several factors that set the limit to the extent to which a
+                    potential can be converted to achievement.`,
+                    image: `pspe.jpg`,
+                    objectives: [
+                        {
+                            subtitle: null,
+                            shorts: `Leaders and senior managers are taken through a number of processes that make them:`,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `Realise their potential`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Improve their self-esteem`
+                                },
+                                {
+                                    id: 3,
+                                    value: `Escalate their self-efficacy`
+                                },
+                                {
+                                    id: 4,
+                                    value: `Improve their knowledge and increase their capacity`
+                                },
+                                {
+                                    id: 5,
+                                    value: `Increase their expectation`
+                                },
+                                {
+                                    id: 6,
+                                    value: `Set very ambitious goal`
+                                },
+                                {
+                                    id: 7,
+                                    value: `Increase their awareness of possibilities`
+                                },
+                                {
+                                    id: 8,
+                                    value: `Explore ways of generating resources to meet targets`
+                                }
+                            ]
+                        },
+                        {
+                            subtitle: null,
+                            shorts: `Specifically such sessions address several issues, including:`,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `The need to recognise and recognise the potential of individuals and organisations`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Improving Self-Efficacy, Self Esteem, Capability and Competence, which ultimately
+                                    develops the leadership capacity of participants;`
+                                },
+                                {
+                                    id: 3,
+                                    value: `Increasing Awareness of Societal/local Problems`
+                                },
+                                {
+                                    id: 4,
+                                    value: `Identifying potential`
+                                },
+                                {
+                                    id: 5,
+                                    value: `Setting targets and growing into them`
+                                },
+                                {
+                                    id: 6,
+                                    value: `Developing Positive Beliefs`
+                                },
+                                {
+                                    id: 7,
+                                    value: `Developing the right culture for optimum productivity`
+                                },
+                                {
+                                    id: 8,
+                                    value: `Understanding how the mind works in either enhancing or inhibiting progress`
+                                },
+                                {
+                                    id: 9,
+                                    value: `Improving self-efficacy as a way of increasing productivity`
+                                },
+                                {
+                                    id: 10,
+                                    value: `Improving self-image and self-esteem`
+                                },
+                                {
+                                    id: 11,
+                                    value: `Developing an attitude of excellence`
+                                },
+                                {
+                                    id: 12,
+                                    value: `Developing visualisations and strong creating vision for the future`
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             private : [
                 {
                     id:1,
                     title : 'HR Transformations',
-                    aim : `HR transformation seeks to change the HR function itself that will in turn, transform the organisation in its approach to conducting business.`,
-                    modules: `The first part of our HR transformation consultancy focuses on the changes that HR as a functional unit can undergo in order to increase its value to the business. This will require defining HR’s role from four perspectives, as:`
+                    image: 'transformation.webp',
+                    aim : `HR transformation seeks to change the HR function itself that will in turn, transform the organisation in its approach to conducting business. 
+                    The first part of our HR transformation consultancy focuses on the changes that HR as a functional unit can undergo in order to increase its value to the business.`,
+                    objectives: [
+                        {
+                            subtitle: null,
+                            shorts: `This will require defining HR’s role from four perspectives, as:`,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `Strategic partner – increasing HR’s understanding of the organisation’s business and its business
+                                    strategy, and aligning HR strategy and activities accordingly;`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Change agent – identifying, initiating and leading change projects (hard and soft) that will accelerate
+                                    the organisation’s pace of realising its strategic goals;`
+                                },
+                                {
+                                    id: 3,
+                                    value: `Administrative expert – transactional and cost-effective HR administration that ensures compliance
+                                    with relevant laws and optimization of value of the workforce;`
+                                },
+                                {
+                                    id: 4,
+                                    value: `Employee champion – motivating employees, promoting their rights, and ensuring fairness, thereby
+                                    increasing workforce engagement, commitment, and productivity.`
+                                }
+                            ]
+                        },
+                        {
+                            subtitle: null,
+                            shorts: `The second requires a rigorous process of ambitious organisational development and cost-effective staff
+                            rationalization that:`,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `focuses the organisation on its vision, mission, objectives and value system;`
+                                },
+                                {
+                                    id: 2,
+                                    value: `helps to influence the organisation’s culture by infusing it with the right and desired value system.`
+                                },
+                                {
+                                    id: 3,
+                                    value: `builds capacity for the employees to work towards living out the organisation’s vision, mission and`
+                                },
+                                {
+                                    id: 4,
+                                    value: `dentifies, classifies and evaluates all roles and jobs, and matches these to the available workforce to
+                                    determine their suitability (quantitatively and qualitatively) for the roles, and redeploying the workforce
+                                    accordingly.`
+                                }
+                            ]
+                        },
+                        {
+                            subtitle: null,
+                            shorts: `Specific areas to focus on include:`,
+                            list: [
+                                {
+                                    id: 1,
+                                    value: `Rationalization of Redundant Staff`
+                                },
+                                {
+                                    id: 2,
+                                    value: `Transforming the HR Function into a Business Partner`
+                                },
+                                {
+                                    id: 3,
+                                    value: `Transforming Reward Systems`
+                                },
+                                {
+                                    id: 4,
+                                    value: `Transforming Performance Management Systems`
+                                },
+                                {
+                                    id: 5,
+                                    value: `Transforming Recruitment and Onboarding`
+                                },
+                                {
+                                    id: 6,
+                                    value: `Transforming Talent Management`
+                                },
+                                {
+                                    id: 7,
+                                    value: `Transforming Succession Planning`
+                                },
+                                {
+                                    id: 8,
+                                    value: `Transforming Employment Practices`
+                                },
+                                {
+                                    id: 9,
+                                    value: `Transforming Working Time Regulations`
+                                },
+                                {
+                                    id: 10,
+                                    value: `Transforming Organisational Culture`
+                                },
+                            ]
+                        },
+                        {
+                            subtitle: null,
+                            shorts: `We have a demonstrated capacity in supporting organisations with each of the above HR transformation
+                            interventions. For further enquiries or to discuss your organisation’s HR transformation needs, please contact us.`,
+                            list: []
+                        }
+                    ]
                 },
                 {
                     id:2,
-                    title : "HR Outsourcing Modules"
+                    title : "HR Outsourcing Modules",
+                    aim : `Details of our outsourced services are displayed below`,
+                    image: 'outsource.jpeg',
+                    tables: [
+                        {
+                            id: 1,
+                            model: `Entire Function`,
+                            description: `Outsource the entire HR function – GSR staff planted
+                            in your site permanently for a specified period`,
+                            client: `Full support for several HR functions`,
+                            cost: ``
+                        },
+                        {
+                            id: 2,
+                            model: `Entire Function, Transfer Knowledge`,
+                            description: `Outsource the entire HR function – GSR staff planted in your site permanently for a specified period - continuous knowledge transfer by means of mentoring
+                            and coaching for staff to take up HR role after contract period`,
+                            client: `Full support for several HR transfer`,
+                            cost: ``
+                        },
+                        {
+                            id: 3,
+                            model: `Set of Functions`,
+                            description: `Outsource a function/set of functions of HR – eg.
+                            recruitment, training, policy design`,
+                            client: `Support for a set of functions`,
+                            cost: ``
+                        },
+                        {
+                            id: 4,
+                            model: `Set for HR staff`,
+                            description: `Receive support for your HR staff from our HR
+                            professionals – a professional visits your site once or
+                            twice a week to provide guidance and support`,
+                            client: `Support for HR function once or twice weekly`,
+                            cost: ``
+                        },
+                        {
+                            id: 5,
+                            model: `Set for HR non-HR staff`,
+                            description: `Receive support for your non-HR staff who are guided
+                            to deliver HR function`,
+                            client: `Support for non-HR function once or twice weekly`,
+                            cost: ``
+                        },
+                        {
+                            id: 6,
+                            model: `Support for non-HR staff Transfer Knowledge`,
+                            description: `Receive support for your non-HR staff who are guided to deliver HR function - and trained to take over entire HR function after contract period`,
+                            client: `Support for non-HR function
+                            once or twice weekly Knowledge transfer`,
+                            cost: ``
+                        },
+                        {
+                            id: 7,
+                            model: `One-off HR service`,
+                            description:  `GSR professionals deliver one-off HR services such as
+                            training, policy design`,
+                            client: `Consultancy service for
+                            named function`,
+                            cost: ``
+                        },
+                        {
+                            id: 8,
+                            model: `Remote support for HR staff`,
+                            description: `Receive remote support for your HR staff GSR
+                            professionals provide telephone and online support to
+                            your in-house HR staff`,
+                            client: `Telephone and online support
+                            for your HR staff from a
+                            remote location`,
+                            cost: ``
+                        }
+                    ]
                 }
             ]
         },
