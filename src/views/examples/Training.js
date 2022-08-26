@@ -7,17 +7,16 @@ import {
   NavLink,
   Nav,
   Container,
-  Button,
   Card,
   CardBody,
   CardImg,
-  CardText,CardTitle,CardSubtitle,
+  CardText,CardTitle,
   Col,
   Row
  
 } from "reactstrap";
 import AuthFooter from 'components/Footers/AuthFooter.js'
-import about from 'assets/img/brand/aboutus.jpeg';
+import pdf from '../../assets/img/pdf-logo.png';
 import data from '../../data.js'
 import logo from "../../assets/img/logo1.jpg";
 
@@ -128,7 +127,7 @@ export default function Training(){
               <br/>
               <div className="mb-5">
             <Row>
-            <Col md="11" className="ml-auto mr-auto">
+            <Col md="12" className="ml-auto mr-auto">
                 <Row>
                 {trainings.map((value, index)=>(
                     <Col md="4" key={value.id}>
@@ -149,6 +148,30 @@ export default function Training(){
                     ))}
                 </Row>
             </Col>
+            </Row>
+
+            <Row>
+              <Col className='mt-5'>
+                <div>
+                  <h2 className="big-text" style={{marginLeft:0, color:"black"}}>
+                      <strong>CVs of Facilitators</strong>
+                  </h2>
+                  <p>
+                  View CVs of our facilitators
+                  </p>
+                </div>
+                <Row>
+                  {data.trainers.map((item) => (
+                    <Col md="3">
+                      <a href={item.file} target="_blank" class="d-flex align-item-center" style={{ border: "1px solid rgb(194 209 225)", borderRadius: '12px', padding: '8px', alignItems:'center' }} rel="noreferrer">
+                        <img src={pdf} alt='cv'style={{ height: '35px', width: 'auto' }}/>
+
+                        <p class="ml-2" style={{ marginBottom: 0, textTransform:"capitalize" }}>{item.name}</p>
+                      </a>
+                    </Col>
+                  ))}
+                </Row>
+              </Col>
             </Row>
             </div>
           </Container>

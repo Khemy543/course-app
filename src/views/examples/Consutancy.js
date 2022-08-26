@@ -131,7 +131,7 @@ export default function Consultancy(props){
             <h3>PUBLIC SECTORS</h3>
             <br/>
             <Row>
-            <Col md="11" className="ml-auto mr-auto">
+            <Col md="12" className="ml-auto mr-auto">
                 <Row>
                 {pub.map((value, key)=>(
                     <Col md="4">
@@ -158,7 +158,7 @@ export default function Consultancy(props){
             <h3>PRIVATE SECTORS </h3>
             <br/>
             <Row>
-            <Col md="11" className="ml-auto mr-auto">
+            <Col md="12" className="ml-auto mr-auto">
                 <Row>
                 {pri.map((value, key)=>(
                     <Col md="4">

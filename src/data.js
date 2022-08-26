@@ -1,4 +1,25 @@
+import ericCv from './assets/cvs/ERIC TACHIE YEBOAH CV1- 2020.pdf';
+import naaCV from './assets/cvs/Naa Dede CV.pdf';
+import comodoreCV from './assets/cvs/Comodore Sam Allotey CV.pdf'
+
 const data = {
+        trainers: [
+            {
+                id: 1,
+                name: "Eric Tachie Yeboah",
+                file: ericCv
+            },
+            {
+                id: 2,
+                name: "Naa Dede CV",
+                file: naaCV
+            },
+            {
+                id: 3,
+                name: "Comodore Sam Allotey CV",
+                file: comodoreCV
+            }
+        ],
         training : {
             courses : [
                 {
