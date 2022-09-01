@@ -1,6 +1,8 @@
 import ericCv from './assets/cvs/ERIC TACHIE YEBOAH CV1- 2020.pdf';
 import naaCV from './assets/cvs/Naa Dede CV.pdf';
 import comodoreCV from './assets/cvs/Comodore Sam Allotey CV.pdf'
+import SamuelCV from './assets/cvs/Dr Samuel Amponsah CV.pdf';
+import lomoteyCV from './assets/cvs/Dr Vandyke Lomotey.pdf'
 
 const data = {
         trainers: [
@@ -18,6 +20,16 @@ const data = {
                 id: 3,
                 name: "Comodore Sam Allotey CV",
                 file: comodoreCV
+            },
+            {
+                id: 4,
+                name: "Dr Samuel Amponsah",
+                file: SamuelCV
+            },
+            {
+                id: 5,
+                name: "Dr Vandyke Lomotey",
+                file: lomoteyCV
             }
         ],
         training : {

@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.7b3c2a69.chunk.css",
-    "main.js": "/static/js/main.73fa5a74.chunk.js",
-    "main.js.map": "/static/js/main.73fa5a74.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2ce211e9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2ce211e9.js.map",
+    "main.js": "/static/js/main.08af8868.chunk.js",
+    "main.js.map": "/static/js/main.08af8868.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.933ec8f1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.933ec8f1.js.map",
     "static/css/2.f4d985a7.chunk.css": "/static/css/2.f4d985a7.chunk.css",
-    "static/js/2.e6cd3173.chunk.js": "/static/js/2.e6cd3173.chunk.js",
-    "static/js/2.e6cd3173.chunk.js.map": "/static/js/2.e6cd3173.chunk.js.map",
+    "static/js/2.db867c62.chunk.js": "/static/js/2.db867c62.chunk.js",
+    "static/js/2.db867c62.chunk.js.map": "/static/js/2.db867c62.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.f4d985a7.chunk.css.map": "/static/css/2.f4d985a7.chunk.css.map",
     "static/css/main.7b3c2a69.chunk.css.map": "/static/css/main.7b3c2a69.chunk.css.map",
-    "static/js/2.e6cd3173.chunk.js.LICENSE.txt": "/static/js/2.e6cd3173.chunk.js.LICENSE.txt",
-    "static/js/main.73fa5a74.chunk.js.LICENSE.txt": "/static/js/main.73fa5a74.chunk.js.LICENSE.txt",
+    "static/js/2.db867c62.chunk.js.LICENSE.txt": "/static/js/2.db867c62.chunk.js.LICENSE.txt",
+    "static/js/main.08af8868.chunk.js.LICENSE.txt": "/static/js/main.08af8868.chunk.js.LICENSE.txt",
+    "static/media/Comodore Sam Allotey CV.1eb9db7c.pdf": "/static/media/Comodore Sam Allotey CV.1eb9db7c.pdf",
+    "static/media/ERIC TACHIE YEBOAH CV1- 2020.1a30042e.pdf": "/static/media/ERIC TACHIE YEBOAH CV1- 2020.1a30042e.pdf",
+    "static/media/Naa Dede CV.427a5014.pdf": "/static/media/Naa Dede CV.427a5014.pdf",
     "static/media/aboutus.b312a1b1.jpeg": "/static/media/aboutus.b312a1b1.jpeg",
     "static/media/angular.jpg": "/static/media/angular.b5045666.jpg",
     "static/media/argon-react.png": "/static/media/argon-react.128d71d3.png",
@@ -54,10 +57,10 @@
     "static/media/vue.jpg": "/static/media/vue.43bd93a8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2ce211e9.js",
+    "static/js/runtime-main.933ec8f1.js",
     "static/css/2.f4d985a7.chunk.css",
-    "static/js/2.e6cd3173.chunk.js",
+    "static/js/2.db867c62.chunk.js",
     "static/css/main.7b3c2a69.chunk.css",
-    "static/js/main.73fa5a74.chunk.js"
+    "static/js/main.08af8868.chunk.js"
   ]
 }
