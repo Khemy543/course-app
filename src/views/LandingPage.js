@@ -1060,7 +1060,7 @@ async function handleFormSubmit(e) {
                                   className="fa fa-mobile mr-3"
                                   aria-hidden="true"
                                 />
-                                030 396 8042
+                                +233 396 8042
                               </li>
                               <li>
                                 <i
