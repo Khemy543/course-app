@@ -46,8 +46,6 @@ export default function CourseDetails(props) {
       selctedCourse = publicConsultancy.find((item) => item.id === Number(id));
     }
 
-    console.log(selctedCourse);
-
     setCourse(selctedCourse);
   }, [props.match.params]);
 
