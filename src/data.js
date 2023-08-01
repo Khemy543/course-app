@@ -225,7 +225,7 @@ const data = {
       },
       {
         id: 2,
-        title: "The Succes Prone Manager(SPM)",
+        title: "The Success Prone Manager(SPM)",
         image: "smp.png",
         modules: [
           {
@@ -1221,7 +1221,7 @@ const data = {
     },
     {
       id: 2,
-      title: "The Succes Prone Manager(SPM)",
+      title: "The Success Prone Manager(SPM)",
       image: "smp.png",
       modules: [
         {
