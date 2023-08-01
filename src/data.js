@@ -9,8 +9,8 @@ const data = {
     {
       id: 1,
       name: "Eric Tachie Yeboah",
-      excerpt: "Learning, talent, and leadership development professional",
-      position: "",
+      excerpt: "A Seasoned HR expert with eighteen (18) years of practice",
+      position: "HR Manager",
       image: "tachie.jpeg",
       file: ericCv,
       content: `<p>
