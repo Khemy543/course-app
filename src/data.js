@@ -13,6 +13,22 @@ const data = {
       position: "",
       image: "tachie.jpeg",
       file: ericCv,
+      content: `<p>
+          Eric Tachie Yeboah is a people oriented and a seasoned HR expert with eighteen (18) years of practice spanning various industries – manufacturing, telecoms, banking & finance, hotel & hospitality, the agro business and currently with the mining industry.  
+        <br/>
+        <br/>
+        Prior to joining GIADEC as HR Manager, Eric briefly served with Jospong Group of Companies as the Head of Human Capital, CAS Group <br>
+        Eric was the Human Resource Business Partner (HRBP) and Comms Advisor at ECOM West Africa. As HRBP and Comms Advisor his key responsibility was to work with Business Heads and Executives to align business and people strategy to drive business growth. 
+        <br/>
+        <br/>
+        Before joining AgroEcom West Africa, Eric was the Group HR for Emery Invest. He also worked with Vodafone Ghana as HR Consultant where for a period of ten (10) years he implemented effective people strategies to drive business growth. Eric has also been the Head of HR for two Financial Institutions – FirsTrust Savings & Loans and Ideal Capital Partners Ltd (IC
+        <br/>
+        <br/>
+        Eric has extensive experience in organizational transformation and development, Training, Learning and Talent Development, Performance Management, Goal/Target Setting and Coaching, Employee and Industrial Relations, Legal Aspects of HRM and Employee Engagement, Employee Assistance Programs and Communication among others. 
+        <br/>
+        <br/>
+        Eric holds an MBA in HRM and he is a Member of the Chartered Institute of Human Resource Management (CIHRM). 
+      </p>`,
     },
     {
       id: 2,
@@ -39,15 +55,15 @@ const data = {
       image: "naa-dedei.jpeg",
       file: naaCV,
     },
-    {
-      id: 3,
-      name: "Comodore Sam Allotey",
-      excerpt: "Learning, talent, and leadership development professional",
-      position: "",
-      content: "",
-      image: "lomotey.jpeg",
-      file: comodoreCV,
-    },
+    // {
+    //   id: 3,
+    //   name: "Comodore Sam Allotey",
+    //   excerpt: "Learning, talent, and leadership development professional",
+    //   position: "",
+    //   content: "",
+    //   image: "lomotey.jpeg",
+    //   file: comodoreCV,
+    // },
     {
       id: 4,
       name: "Dr Samuel Amponsah",
