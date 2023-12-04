@@ -106,10 +106,10 @@ export default function Consultancy(props){
             <NavItem>
               <NavLink  
               className="mt--2"
-              href="/auth/login"
+              href="/overseas-training-calendar"
               style={{fontWeight:"700",color:"yellow", backgroundColor:"#17d0cf", padding:"10px", borderRadius:"10px"}}                  
               >
-                  GET STARTED <i className="fa fa-sign-in"/>
+                TRAINING CALENDAR
               </NavLink>
             </NavItem>
           </Nav>

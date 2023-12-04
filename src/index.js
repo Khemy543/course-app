@@ -25,6 +25,7 @@ import SrollToTop from "react-router-scroll-top";
 import Consultancy from "views/examples/Consutancy";
 import ConsultancyDetails from "views/examples/ConsultancyDetails";
 import Profile from "views/examples/Profile";
+import OverseasTrainingCalendar from "views/examples/OverseasTrainingCalendar";
 
 
 const store =  configureStore();
@@ -50,6 +51,7 @@ ReactDOM.render(
         <AuthRedirection exact path="/senior-level-public-leadership" component={SeniorLevel} />
         <AuthRedirection exact path="/consultancy" component={Consultancy} />
         <AuthRedirection exact path="/facilitator/:name/profile" component={Profile} />
+        <AuthRedirection exact path="/overseas-training-calendar" component={OverseasTrainingCalendar} />
         </Switch>
     </BrowserRouter>
     </Provider>,

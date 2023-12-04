@@ -108,8 +108,6 @@ function LandingPage(props) {
   const [message, setMessage] = React.useState("");
   const [error, setError] = React.useState({})
 
-  console.log(props)
-
 
 async function handleFormSubmit(e) {
   e.preventDefault();
@@ -411,7 +409,7 @@ async function handleFormSubmit(e) {
                 <NavItem>
                   <NavLink
                     className="mt--2"
-                    href="/auth/login"
+                    href="/overseas-training-calendar"
                     style={{
                       fontWeight: "700",
                       color: "yellow",
@@ -420,7 +418,7 @@ async function handleFormSubmit(e) {
                       borderRadius: "10px",
                     }}
                   >
-                    GET STARTED <i className="fa fa-sign-in" />
+                  TRAINING CALENDAR
                   </NavLink>
                 </NavItem>
               </Nav>

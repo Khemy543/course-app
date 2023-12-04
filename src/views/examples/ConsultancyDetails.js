@@ -114,7 +114,7 @@ export default function CourseDetails(props) {
                 <NavItem>
                   <NavLink
                     className="mt--2"
-                    href="/auth/login"
+                    href="/overseas-training-calendar"
                     style={{
                       fontWeight: "700",
                       color: "yellow",
@@ -123,7 +123,7 @@ export default function CourseDetails(props) {
                       borderRadius: "10px",
                     }}
                   >
-                    GET STARTED <i className="fa fa-sign-in" />
+                    TRAINING CALENDAR
                   </NavLink>
                 </NavItem>
               </Nav>
