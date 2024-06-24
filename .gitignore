@@ -2,3 +2,5 @@
 package-lock.json
 .eslintcache
 .env
+/build
+build.zip
