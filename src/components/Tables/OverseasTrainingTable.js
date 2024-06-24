@@ -167,7 +167,7 @@ export default class CalendarTable extends React.Component {
       {
         id: 34,
         name: "Tax and Revenue Courses",
-        file: "Tax and Revenue Courses.pdf",
+        file: "Tax and Revenue Courses .pdf",
       },
     ],
   };
@@ -189,7 +189,7 @@ export default class CalendarTable extends React.Component {
               <th>{value.name}</th>
               <td style={{ textAlign: "right" }}>
                 <a
-                  href={`https://core.mosesimmigration.com/oversees-training/${value.file}`}
+                  href={`https://backends.resourcegsr.com/oversees-training/${value.file}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -200,7 +200,7 @@ export default class CalendarTable extends React.Component {
                   />
                 </a>
                 <a
-                  href={`https://core.mosesimmigration.com/api/download/${value.file}/file`}
+                  href={`https://backends.resourcegsr.com/api/download/${value.file}/file`}
                   download
                 >
                   <i
